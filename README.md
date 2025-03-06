@@ -1,4 +1,4 @@
-# ** Combien coûte un jour de vie dans le monde ?💰**  
+#  Combien coûte un jour de vie dans le monde ?💰  
 
 ## **📖 Contexte**  
 Le projet **"Combien coûte un jour de vie dans le monde ?"** vise à comparer le coût de la vie dans différents pays à travers une visualisation de données interactive. L'objectif est de permettre aux utilisateurs d'explorer les différences de dépenses quotidiennes selon leur lieu de résidence ou d'expatriation.  
