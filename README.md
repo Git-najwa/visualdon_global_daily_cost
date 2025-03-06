@@ -11,7 +11,7 @@ Les données utilisées proviennent de sources fiables et sont mises à jour ré
 
 Ces données sont collectées et agrégées par des institutions, chercheurs et contributeurs, offrant une vue globale des dépenses quotidiennes dans le monde.  
 
----
+
 
 ## **🗂️ Format et Structure des Données**  
 Les données sont fournies sous différents formats :  
@@ -35,19 +35,13 @@ Les données sont fournies sous différents formats :
 
 Ces données permettent de comparer efficacement les coûts de la vie entre pays et d'offrir une visualisation interactive des différences économiques globales.  
 
----
+
 
 ## **🎯 Objectif du Projet**  
 
 L’objectif principal est d’explorer le coût de la vie à travers le monde grâce à une visualisation interactive. Ce projet permet aux utilisateurs de naviguer dans les données, d’observer les disparités économiques entre les pays et d’identifier des tendances globales.  
 
 Les utilisateurs pourront comparer les différences de coûts quotidiens et explorer les variations de pouvoir d'achat selon les régions, en mettant en lumière les contrastes économiques internationaux.  
-
----
-
-Voici la partie **Références** avec de **vrais liens cliquables** correctement formatés pour un fichier **README.md** sur GitHub :  
-
----
 
 ## **📚 Références**  
 
