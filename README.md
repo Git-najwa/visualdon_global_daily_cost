@@ -41,7 +41,13 @@ Ces données permettent de comparer efficacement les coûts de la vie entre pays
 
 L’objectif principal est d’explorer le coût de la vie à travers le monde grâce à une visualisation interactive. Ce projet permet aux utilisateurs de naviguer dans les données, d’observer les disparités économiques entre les pays et d’identifier des tendances globales.  
 
-Les utilisateurs pourront comparer les différences de coûts quotidiens et explorer les variations de pouvoir d'achat selon les régions, en mettant en lumière les contrastes économiques internationaux.  
+Les utilisateurs pourront comparer les différences de coûts quotidiens et explorer les variations de pouvoir d'achat selon les régions, en mettant en lumière les contrastes économiques internationaux.
+
+### **🖼️ Wireframe**  
+
+📌 **Accédez au wireframe ici** 👉 [Figma - Wireframe VisualDon](https://www.figma.com/design/f38k1xOrdXAziVvV0ZuVHP/VisualDon?node-id=47-3943&t=iobNvDFSUINVNXgm-1)  
+
+Ce wireframe sert de guide pour le développement de l’interface utilisateur. 
 
 ## **📚 Références**  
 
