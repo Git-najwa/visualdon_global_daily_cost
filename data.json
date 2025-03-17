@@ -1,1 +1,33 @@
+{
+    "France": {
+        "cost": "50€",
+        "activities": [
+            "Petit-déjeuner: 5€",
+            "Transport: 2€",
+            "Déjeuner: 15€",
+            "Loisir: 10€",
+            "Dîner: 18€"
+        ]
+    },
+    "USA": {
+        "cost": "$70",
+        "activities": [
+            "Petit-déjeuner: $10",
+            "Transport: $5",
+            "Déjeuner: $20",
+            "Loisir: $15",
+            "Dîner: $20"
+        ]
+    },
+    "Japon": {
+        "cost": "¥8000",
+        "activities": [
+            "Petit-déjeuner: ¥1000",
+            "Transport: ¥800",
+            "Déjeuner: ¥2500",
+            "Loisir: ¥2000",
+            "Dîner: ¥1700"
+        ]
+    }
+}
 
