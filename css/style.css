@@ -25,3 +25,9 @@ button {
 button:hover {
     background: #2563eb;
 }
+
+#map {
+    display: block;
+    margin: auto;
+  }
+  

@@ -18,6 +18,8 @@ Promise.all([
     .attr("fill", "#4a5568")
     .attr("stroke", "#2d3748")
     .on("click", function (event, d) {
+      d3.selectAll("path").attr("fill", "#4a5568"); // Reset
+  d3.select(this).attr("fill", "#4299e1"); // Highlight
       const countryName = d.properties.name || "Inconnu";
       if (costData[countryName]) {
         document.getElementById("country-name").textContent = countryName;
@@ -29,4 +31,6 @@ Promise.all([
 
       document.getElementById("day-simulation").classList.add("hidden");
     });
+    
 });
+
