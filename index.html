@@ -1,38 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Combien coûte un jour de vie ?</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-<script src="https://unpkg.com/topojson@3"></script>
-<script src="map.js"></script>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Combien coûte un jour de vie ?</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://unpkg.com/topojson@3"></script>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <div class="container mx-auto p-6 text-center">
-        <h1 class="text-3xl font-bold mb-6">Combien coûte un jour de vie dans le monde ?</h1>
-        
-        <div id="map-container" class="bg-gray-800 p-4 rounded-lg shadow-md">
-            <p class="text-lg">Sélectionne un pays :</p>
-            <select id="countrySelect" class="mt-2 p-2 text-black" onchange="loadCountryData()">
-                <option value="">-- Choisir un pays --</option>
-            </select>
-        </div>
-
-        <div id="country-info" class="mt-6 hidden">
-            <h2 class="text-2xl font-semibold" id="country-name"></h2>
-            <p class="mt-2" id="daily-cost"></p>
-            <button onclick="startSimulation()" class="mt-4 px-4 py-2 bg-blue-500 rounded-lg">Voir une journée type</button>
-        </div>
-
-        <div id="day-simulation" class="mt-8 hidden">
-            <h2 class="text-2xl font-bold">Déroulement de la journée</h2>
-            <div id="timeline" class="mt-4"></div>
-        </div>
+  <div class="container mx-auto p-6 text-center">
+    <h1 class="text-3xl font-bold mb-6">Combien coûte un jour de vie dans le monde ?</h1>
+    
+    <div id="map-container" class="bg-gray-800 p-4 rounded-lg shadow-md">
+      <svg id="map" width="800" height="400"></svg>
     </div>
-    <script src="script.js"></script>
+
+    <div id="country-info" class="mt-6 hidden">
+      <h2 class="text-2xl font-semibold" id="country-name"></h2>
+      <p class="mt-2" id="daily-cost"></p>
+      <button onclick="startSimulation()" class="mt-4 px-4 py-2 bg-blue-500 rounded-lg">Voir une journée type</button>
+    </div>
+
+    <div id="day-simulation" class="mt-8 hidden">
+      <h2 class="text-2xl font-bold">Déroulement de la journée</h2>
+      <div id="timeline" class="mt-4"></div>
+    </div>
+  </div>
+
+  <script src="js/map.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

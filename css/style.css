@@ -1,7 +1,7 @@
 body {
     background-color: #1a202c;
     color: white;
-    font-family: Arial, sans-serif;
+    font-family: 'Pixelify Sans', sans-serif;
 }
 
 .container {
@@ -19,9 +19,9 @@ body {
 button {
     cursor: pointer;
     transition: background 0.3s;
+    font-family: 'Pixelify Sans', sans-serif;
 }
 
 button:hover {
     background: #2563eb;
 }
-
