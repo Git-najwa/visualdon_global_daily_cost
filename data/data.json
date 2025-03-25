@@ -9,7 +9,7 @@
         "Dîner: 18€"
       ]
     },
-    "USA": {
+    "United States of America": {
       "cost": "$70",
       "activities": [
         "Petit-déjeuner: $10",
@@ -19,7 +19,7 @@
         "Dîner: $20"
       ]
     },
-    "Japon": {
+    "Japan": {
       "cost": "¥8000",
       "activities": [
         "Petit-déjeuner: ¥1000",
