@@ -17,8 +17,19 @@ if (!country || !data[country]) {
     const hour = 7 + index * 2;
     const block = document.createElement("div");
     block.classList.add("activity-block");
-    block.style.backgroundImage = `url('data/assets/scene${index + 1}.png')`;
-
+    const scenes = [
+        "scene1.gif",
+        "scene2.gif",
+        "scene3.gif",
+        "scene4.gif",
+        "scene5.gif",
+        "scene6.gif",
+        "scene7.gif",
+        "scene8.webp",
+        "scene9.gif",
+      ];
+      
+      block.style.backgroundImage = `url('data/assets/${scenes[index]}')`;
     let bubbleHTML = "";
     let costHTML = "";
 
