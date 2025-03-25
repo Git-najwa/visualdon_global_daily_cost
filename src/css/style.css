@@ -102,13 +102,14 @@ button:hover {
   }
   
   
-  /* Fusée plus grande */
+  /* Fusée  */
   #rocket {
     position: absolute;
-    width: 90px; /* augmenté */
+    width: 90px; 
     top: 320px;
     left: 100px;
     z-index: 50;
     transition: all 0.8s ease-in-out;
   }
+  
   

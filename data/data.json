@@ -3,125 +3,125 @@
     "cost": "75€",
     "activities": [
       null,
-      "Eau et électricité: 4€",
+      "Eau et électricité: 5€",
       "Petit-déjeuner: 6€",
-      "Transport: 3€",
-      "Courses: 15€",
-      "Souper: 12€",
+      "Transport: 4€",
+      "Courses: 16€",
+      "Souper: 14€",
       "Activité: 10€",
-      "Loyer: 25€",
+      "Loyer: 20€",
       null
     ]
   },
   "United States of America": {
-    "cost": "$85",
+    "cost": "82€",
     "activities": [
       null,
-      "Utilities: $6",
-      "Breakfast: $8",
-      "Transport: $5",
-      "Groceries: $18",
-      "Dinner: $15",
-      "Going out: $10",
-      "Rent: $23",
+      "Eau et électricité: 6€",
+      "Petit-déjeuner: 7€",
+      "Transport: 5€",
+      "Courses: 17€",
+      "Souper: 14€",
+      "Activité: 9€",
+      "Loyer: 24€",
       null
     ]
   },
   "Japan": {
-    "cost": "¥9500",
+    "cost": "60€",
     "activities": [
       null,
-      "水道光熱費: ¥800",
-      "朝食: ¥900",
-      "交通: ¥600",
-      "買い物: ¥1800",
-      "夕食: ¥1600",
-      "娯楽: ¥1500",
-      "家賃: ¥2300",
+      "Eau et électricité: 5€",
+      "Petit-déjeuner: 5.5€",
+      "Transport: 3.5€",
+      "Courses: 12€",
+      "Souper: 10€",
+      "Activité: 9€",
+      "Loyer: 15€",
       null
     ]
   },
   "Germany": {
-    "cost": "70€",
+    "cost": "71€",
     "activities": [
       null,
-      "Wasser & Strom: 5€",
-      "Frühstück: 6€",
-      "Transport: 4€",
-      "Einkaufen: 16€",
-      "Abendessen: 12€",
-      "Freizeit: 10€",
-      "Miete: 17€",
+      "Eau et électricité: 5.5€",
+      "Petit-déjeuner: 6€",
+      "Transport: 3.5€",
+      "Courses: 15€",
+      "Souper: 12€",
+      "Activité: 10€",
+      "Loyer: 19€",
       null
     ]
   },
   "Brazil": {
-    "cost": "R$160",
+    "cost": "28€",
     "activities": [
       null,
-      "Água e energia: R$12",
-      "Café da manhã: R$10",
-      "Transporte: R$8",
-      "Mercado: R$35",
-      "Jantar: R$30",
-      "Lazer: R$25",
-      "Aluguel: R$40",
+      "Eau et électricité: 2€",
+      "Petit-déjeuner: 2€",
+      "Transport: 1.5€",
+      "Courses: 5.8€",
+      "Souper: 4.8€",
+      "Activité: 4€",
+      "Loyer: 7.9€",
       null
     ]
   },
   "India": {
-    "cost": "₹2000",
+    "cost": "21€",
     "activities": [
       null,
-      "Utilities: ₹200",
-      "Breakfast: ₹150",
-      "Transport: ₹120",
-      "Groceries: ₹400",
-      "Dinner: ₹350",
-      "Entertainment: ₹300",
-      "Rent: ₹480",
+      "Eau et électricité: 1.8€",
+      "Petit-déjeuner: 1.5€",
+      "Transport: 1.2€",
+      "Courses: 4.5€",
+      "Souper: 3.5€",
+      "Activité: 2.9€",
+      "Loyer: 5.6€",
       null
     ]
   },
   "Mexico": {
-    "cost": "$600 MXN",
+    "cost": "29€",
     "activities": [
       null,
-      "Servicios: $40",
-      "Desayuno: $50",
-      "Transporte: $30",
-      "Compras: $120",
-      "Cena: $100",
-      "Ocio: $90",
-      "Renta: $170",
+      "Eau et électricité: 2€",
+      "Petit-déjeuner: 2.2€",
+      "Transport: 1.6€",
+      "Courses: 5.8€",
+      "Souper: 5.3€",
+      "Activité: 4.2€",
+      "Loyer: 7.9€",
       null
     ]
   },
   "Australia": {
-    "cost": "AU$95",
+    "cost": "59€",
     "activities": [
       null,
-      "Utilities: AU$7",
-      "Breakfast: AU$10",
-      "Transport: AU$6",
-      "Groceries: AU$20",
-      "Dinner: AU$18",
-      "Activity: AU$12",
-      "Rent: AU$22",
+      "Eau et électricité: 4.5€",
+      "Petit-déjeuner: 6.5€",
+      "Transport: 3.7€",
+      "Courses: 12€",
+      "Souper: 11€",
+      "Activité: 8€",
+      "Loyer: 13.3€",
       null
     ]
   },
   "Italy": {
-    "cost": "65€",
+    "cost": "63€",
     "activities": [
       null,
-      "Acqua e luce: 4€",
-      "Colazione: 5€",
-      "Trasporto: 3€",
-      "Spesa: 15€",
-      "Cena: 11€",
-      "Svago: 10€",
-      "Affitto: 17€",
+      "Eau et électricité: 4.2€",
+      "Petit-déjeuner: 5.2€",
+      "Transport: 3€",
+      "Courses: 14€",
+      "Souper: 10.5€",
+      "Activité: 9.5€",
+      "Loyer: 16€",
       null
     ]
   },
@@ -129,84 +129,226 @@
     "cost": "60€",
     "activities": [
       null,
-      "Agua y luz: 4€",
-      "Desayuno: 4€",
-      "Transporte: 3€",
-      "Compras: 14€",
-      "Cena: 10€",
-      "Ocio: 9€",
-      "Alquiler: 16€",
+      "Eau et électricité: 3.9€",
+      "Petit-déjeuner: 4.5€",
+      "Transport: 3€",
+      "Courses: 13€",
+      "Souper: 9.8€",
+      "Activité: 9€",
+      "Loyer: 16.8€",
       null
     ]
   },
   "Russia": {
-    "cost": "₽3200",
+    "cost": "31€",
     "activities": [
       null,
-      "Коммунальные: ₽300",
-      "Завтрак: ₽400",
-      "Транспорт: ₽200",
-      "Покупки: ₽700",
-      "Ужин: ₽600",
-      "Развлечения: ₽500",
-      "Аренда: ₽500",
+      "Eau et électricité: 2.8€",
+      "Petit-déjeuner: 3.5€",
+      "Transport: 1.9€",
+      "Courses: 6.2€",
+      "Souper: 5.3€",
+      "Activité: 4.8€",
+      "Loyer: 6.5€",
       null
     ]
   },
   "Canada": {
-    "cost": "CA$85",
+    "cost": "60€",
     "activities": [
       null,
-      "Utilities: CA$6",
-      "Breakfast: CA$9",
-      "Transport: CA$5",
-      "Groceries: CA$18",
-      "Dinner: CA$15",
-      "Fun: CA$12",
-      "Rent: CA$20",
+      "Eau et électricité: 4.8€",
+      "Petit-déjeuner: 6.8€",
+      "Transport: 3.5€",
+      "Courses: 12€",
+      "Souper: 10.5€",
+      "Activité: 7.5€",
+      "Loyer: 15.4€",
       null
     ]
   },
   "China": {
-    "cost": "¥250",
+    "cost": "30€",
     "activities": [
       null,
-      "水电费: ¥20",
-      "早餐: ¥25",
-      "交通: ¥15",
-      "超市: ¥50",
-      "晚餐: ¥45",
-      "娱乐: ¥40",
-      "租金: ¥55",
+      "Eau et électricité: 2.5€",
+      "Petit-déjeuner: 3€",
+      "Transport: 1.6€",
+      "Courses: 6.3€",
+      "Souper: 5.5€",
+      "Activité: 4.5€",
+      "Loyer: 6.6€",
       null
     ]
   },
   "Argentina": {
-    "cost": "$9500 ARS",
+    "cost": "19€",
     "activities": [
       null,
-      "Servicios: $800",
-      "Desayuno: $900",
-      "Transporte: $600",
-      "Compras: $2000",
-      "Cena: $1800",
-      "Ocio: $1300",
-      "Alquiler: $2100",
+      "Eau et électricité: 1.5€",
+      "Petit-déjeuner: 1.8€",
+      "Transport: 1.1€",
+      "Courses: 4.1€",
+      "Souper: 3.5€",
+      "Activité: 2.6€",
+      "Loyer: 4.4€",
       null
     ]
   },
   "South Korea": {
-    "cost": "₩90000",
+    "cost": "60€",
     "activities": [
       null,
-      "전기/수도: ₩8000",
-      "아침식사: ₩9000",
-      "교통: ₩7000",
-      "장보기: ₩20000",
-      "저녁: ₩17000",
-      "여가: ₩12000",
-      "월세: ₩17000",
+      "Eau et électricité: 5€",
+      "Petit-déjeuner: 6€",
+      "Transport: 4.5€",
+      "Courses: 13.5€",
+      "Souper: 11€",
+      "Activité: 8€",
+      "Loyer: 12€",
       null
     ]
+  },
+    "South Africa": {
+      "cost": "28€",
+      "activities": [
+        null,
+        "Eau et électricité: 2.5€",
+        "Petit-déjeuner: 2€",
+        "Transport: 1.8€",
+        "Courses: 6.5€",
+        "Souper: 5€",
+        "Activité: 4.5€",
+        "Loyer: 5.7€",
+        null
+      ]
+    },
+    "Kenya": {
+      "cost": "22€",
+      "activities": [
+        null,
+        "Eau et électricité: 2€",
+        "Petit-déjeuner: 1.5€",
+        "Transport: 1.3€",
+        "Courses: 5€",
+        "Souper: 4€",
+        "Activité: 3.5€",
+        "Loyer: 4.7€",
+        null
+      ]
+    },
+    "Nigeria": {
+      "cost": "21€",
+      "activities": [
+        null,
+        "Eau et électricité: 2€",
+        "Petit-déjeuner: 1.5€",
+        "Transport: 1.2€",
+        "Courses: 4.6€",
+        "Souper: 3.8€",
+        "Activité: 3€",
+        "Loyer: 4.9€",
+        null
+      ]
+    },
+    "Egypt": {
+      "cost": "24€",
+      "activities": [
+        null,
+        "Eau et électricité: 2.2€",
+        "Petit-déjeuner: 2€",
+        "Transport: 1.5€",
+        "Courses: 5.5€",
+        "Souper: 4.2€",
+        "Activité: 3.6€",
+        "Loyer: 5€",
+        null
+      ]
+    },
+    "Tunisia": {
+      "cost": "23€",
+      "activities": [
+        null,
+        "Eau et électricité: 2.1€",
+        "Petit-déjeuner: 1.8€",
+        "Transport: 1.4€",
+        "Courses: 5.3€",
+        "Souper: 4.1€",
+        "Activité: 3.2€",
+        "Loyer: 5.1€",
+        null
+      ]
+    },
+    "Thailand": {
+      "cost": "26€",
+      "activities": [
+        null,
+        "Eau et électricité: 2.3€",
+        "Petit-déjeuner: 2.2€",
+        "Transport: 1.6€",
+        "Courses: 5.8€",
+        "Souper: 4.8€",
+        "Activité: 4€",
+        "Loyer: 5.3€",
+        null
+      ]
+    },
+    "Philippines": {
+      "cost": "24€",
+      "activities": [
+        null,
+        "Eau et électricité: 2.2€",
+        "Petit-déjeuner: 2€",
+        "Transport: 1.4€",
+        "Courses: 5.2€",
+        "Souper: 4.3€",
+        "Activité: 3.5€",
+        "Loyer: 5€",
+        null
+      ]
+    },
+    "Vietnam": {
+      "cost": "23€",
+      "activities": [
+        null,
+        "Eau et électricité: 2€",
+        "Petit-déjeuner: 1.8€",
+        "Transport: 1.3€",
+        "Courses: 5€",
+        "Souper: 4€",
+        "Activité: 3.2€",
+        "Loyer: 4.7€",
+        null
+      ]
+    },
+    "Indonesia": {
+      "cost": "25€",
+      "activities": [
+        null,
+        "Eau et électricité: 2.1€",
+        "Petit-déjeuner: 1.9€",
+        "Transport: 1.5€",
+        "Courses: 5.4€",
+        "Souper: 4.5€",
+        "Activité: 3.7€",
+        "Loyer: 5.4€",
+        null
+      ]
+    },
+    "Morocco": {
+      "cost": "25€",
+      "activities": [
+        null,
+        "Eau et électricité: 2.3€",
+        "Petit-déjeuner: 2€",
+        "Transport: 1.6€",
+        "Courses: 5.5€",
+        "Souper: 4.5€",
+        "Activité: 3.8€",
+        "Loyer: 5.3€",
+        null
+      ]
+    }
   }
-}
+  
+
