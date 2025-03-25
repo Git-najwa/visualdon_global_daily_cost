@@ -1,8 +1,14 @@
 const svg = d3.select("#map");
+svg.attr("width", 1200).attr("height", 600); // ⬅️ Taille plus grande
 const width = +svg.attr("width");
 const height = +svg.attr("height");
 
-const projection = d3.geoMercator().scale(90).translate([width / 2, height / 1.5]);
+const projection = d3.geoMercator().scale(125).translate([width / 2, height / 1.45
+
+
+
+
+]);
 const path = d3.geoPath().projection(projection);
 
 Promise.all([

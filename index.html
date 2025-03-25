@@ -22,11 +22,13 @@
 
     <div class="pixel-overlay"></div>
 
-    <div id="country-info" class="mt-6 hidden">
-      <h2 class="text-2xl font-semibold" id="country-name"></h2>
-      <p class="mt-2" id="daily-cost"></p>
-      <button onclick="startSimulation()" class="mt-4 px-4 py-2 bg-blue-500 rounded-lg">Voir une journée type</button>
-    </div>
+     <!-- Bloc info repositionné en bas à gauche -->
+  <div id="country-info" class="info-box hidden">
+    <h2 id="country-name">Canada</h2>
+    <p id="daily-cost">Coût moyen par jour : CA$75</p>
+    <button onclick="startSimulation()">Voir une journée type</button>
+  </div>
+</div>
 
     <div id="day-simulation" class="mt-8 hidden">
       <h2 class="text-2xl font-bold">Déroulement de la journée</h2>

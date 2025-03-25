@@ -1,18 +1,22 @@
 body {
-    background-color: #5454e7;
+    background: url('/data/assets/mapFond.gif') no-repeat center center fixed;
+    background-size: cover;
     font-family: 'Press Start 2P', cursive;
-    color: white;
-}
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    color: rgb(255, 255, 255);
+  }
 
 .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: auto;
     text-align: center;
 }
 
 #map-container {
     position: relative;
-    background: #0c0c4f;
+    background: #0000007c;
   }
 
 button {
@@ -33,14 +37,8 @@ button:hover {
     mix-blend-mode: screen;
   }
   
-  #rocket {
-    position: absolute;
-    width: 60px;
-    top: 340px;
-    left: 100px;
-    z-index: 50;
-    transition: all 0.8s ease-in-out;
-  }
+ 
+  
   .pixel-overlay {
     position: fixed;
     top: 0;
@@ -52,5 +50,65 @@ button:hover {
     opacity: 0.1;
     pointer-events: none;
     z-index: 100;
+  }
+  
+/* Info dans un coin comme un HUD */
+.info-box {
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    background: rgba(5, 5, 77, 0.8);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: left;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    box-shadow: 0 0 12px #000;
+    z-index: 30;
+    max-width: 300px;
+  }
+  
+  .info-box h2 {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 4px #15e3fa;
+  }
+  
+  .info-box p {
+    font-size: 0.7rem;
+    color: #f0f0f0;
+    margin-bottom: 1rem;
+  }
+  
+  .info-box button {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.6rem;
+    color: #0a0a3d;
+    background-color: #15e3fa;
+    border: 3px solid #0a0a3d;
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 0 5px #15e3fa, 0 0 10px #facc15;
+    transition: all 0.3s ease;
+  }
+  
+  .info-box button:hover {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 0 10px #fff, 0 0 20px #facc15;
+  }
+  
+  
+  /* Fusée plus grande */
+  #rocket {
+    position: absolute;
+    width: 90px; /* augmenté */
+    top: 320px;
+    left: 100px;
+    z-index: 50;
+    transition: all 0.8s ease-in-out;
   }
   
