@@ -19,7 +19,24 @@
       <h1 class="text-3xl font-bold mb-6">Combien coûte un jour de vie dans le monde ?</h1>
       <svg id="map" width="800" height="400"></svg>
       <img src="/data/assets/rocket-pixel.webp" id="rocket" alt="rocket" />
+      <div class="flex flex-col items-center mt-16 space-y-4" id="spaceship-section">
+        <button id="toggleView"
+          class="px-6 py-3 rounded-full text-white font-bold tracking-wide bg-pink-500 shadow-lg hover:bg-pink-400 transition"
+          style="font-family: 'Press Start 2P', cursive; box-shadow: 0 0 10px #f472b6, 0 0 20px #f472b6;">
+          Voir les pays les moins chers
+        </button>
+        <div id="cockpit-chart" class="relative mt-6"></div>
+      </div>
+      <div id="cockpit-chart" class="mt-16"></div>
+      <div id="cockpit-chart" class="mt-16"></div>   
+      <!-- Effet sonore rétro -->
+<audio id="soucoupe-audio" src="/data/assets/soucoupe.wav" preload="auto"></audio>
+     
     </div>
+
+    <section id="space-visual">
+      <div id="spaceship-chart" class="h-[600px] my-32"></div>
+    </section>
 
     <div class="pixel-overlay"></div>
 
@@ -39,5 +56,7 @@
 
   <script src="src/js/map.js"></script>
   <script src="src/js/script.js"></script>
+  <script type="module" src="/src/js/radar.js"></script>
+
 </body>
 </html>
