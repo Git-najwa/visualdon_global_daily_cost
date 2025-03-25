@@ -10,63 +10,61 @@ const topCountries = [
     { name: "Brésil", value: 30 }
   ];
   
-  const width = 300;
-  const height = 300;
+  let showingLow = false;
+  let currentData = topCountries;
   
-  const svg = d3.select("#cockpit-chart")
-    .append("svg")
-    .attr("width", width)
-    .attr("height", height)
-    .style("overflow", "visible");
+  function drawUFO(color = "#38bdf8") {
+    const group = d3.select("#cockpit-chart svg g");
+    if (!group.empty()) group.remove();
   
-  const group = svg.append("g")
-    .attr("transform", `translate(${width / 2}, ${height / 2})`)
-    .attr("id", "spaceship");
+    const width = 300;
+    const height = 300;
   
-  function drawUFO(color = "#f472b6") {
-    group.selectAll("*").remove();
+    const svg = d3.select("#cockpit-chart svg");
+    const g = svg.append("g")
+      .attr("transform", `translate(${width / 2}, ${height / 2})`);
   
-    // Corps
-    group.append("ellipse")
-      .attr("rx", 150)
-      .attr("ry", 70)
+    // Corps de la soucoupe
+    g.append("ellipse")
+      .attr("rx", 170)
+      .attr("ry", 75)
       .attr("fill", "#0a0a3d")
       .style("filter", `drop-shadow(0 0 15px ${color})`);
   
     // Dôme
-    group.append("ellipse")
+    g.append("ellipse")
       .attr("cy", -40)
-      .attr("rx", 80)
+      .attr("rx", 90)
       .attr("ry", 40)
       .attr("fill", color)
       .attr("opacity", 0.3);
   
     // Antenne
-    group.append("line")
+    g.append("line")
       .attr("x1", 0)
       .attr("y1", -70)
       .attr("x2", 0)
       .attr("y2", -100)
       .attr("stroke", color)
       .attr("stroke-width", 2);
-    
-    group.append("circle")
+      
+    g.append("circle")
       .attr("cx", 0)
       .attr("cy", -100)
       .attr("r", 5)
       .attr("fill", color);
   
     // Anneau lumineux
-    group.append("ellipse")
-      .attr("rx", 125)
-      .attr("ry", 55)
+    g.append("ellipse")
+      .attr("rx", 140)
+      .attr("ry", 60)
       .attr("stroke", color)
       .attr("fill", "none")
       .attr("stroke-width", 2)
       .attr("stroke-dasharray", "5 5");
   
-    // Texte centré
-    group.append("g")
+    // Pays au centre
+    g.append("g")
       .attr("text-anchor", "middle")
       .attr("transform", "translate(0, 0)")
       .selectAll("text")
@@ -80,18 +78,27 @@ const topCountries = [
       .style("font-family", "'Press Start 2P', cursive");
   }
   
-  let showingLow = false;
-  let currentData = topCountries;
+  // Initialisation du SVG
+  d3.select("#cockpit-chart")
+    .append("svg")
+    .attr("width", 300)
+    .attr("height", 300)
+    .style("overflow", "visible");
+  
   drawUFO();
   
-  // Toggle via bouton
   document.getElementById("toggleView").addEventListener("click", () => {
     showingLow = !showingLow;
     currentData = showingLow ? lowCountries : topCountries;
   
-    drawUFO(showingLow ? "#f472b6" : "#facc15");
+    // Re-dessine la soucoupe
+    drawUFO(showingLow ? "#f472b6" : "#38bdf8");
   
-    document.getElementById("toggleView").innerText =
-      showingLow ? "Voir les pays les plus chers" : "Voir les pays les moins chers";
+    // Met à jour le bouton
+    const btn = document.getElementById("toggleView");
+    btn.classList.toggle("low", showingLow);
+    btn.innerText = showingLow
+      ? "Voir les 3 pays les plus chers"
+      : "Voir les 3 pays les moins chers";
   });
   
