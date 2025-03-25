@@ -1,33 +1,212 @@
 {
-    "France": {
-      "cost": "50€",
-      "activities": [
-        "Petit-déjeuner: 5€",
-        "Transport: 2€",
-        "Déjeuner: 15€",
-        "Loisir: 10€",
-        "Dîner: 18€"
-      ]
-    },
-    "United States of America": {
-      "cost": "$70",
-      "activities": [
-        "Petit-déjeuner: $10",
-        "Transport: $5",
-        "Déjeuner: $20",
-        "Loisir: $15",
-        "Dîner: $20"
-      ]
-    },
-    "Japan": {
-      "cost": "¥8000",
-      "activities": [
-        "Petit-déjeuner: ¥1000",
-        "Transport: ¥800",
-        "Déjeuner: ¥2500",
-        "Loisir: ¥2000",
-        "Dîner: ¥1700"
-      ]
-    }
+  "France": {
+    "cost": "75€",
+    "activities": [
+      null,
+      "Eau et électricité: 4€",
+      "Petit-déjeuner: 6€",
+      "Transport: 3€",
+      "Courses: 15€",
+      "Souper: 12€",
+      "Activité: 10€",
+      "Loyer: 25€",
+      null
+    ]
+  },
+  "United States of America": {
+    "cost": "$85",
+    "activities": [
+      null,
+      "Utilities: $6",
+      "Breakfast: $8",
+      "Transport: $5",
+      "Groceries: $18",
+      "Dinner: $15",
+      "Going out: $10",
+      "Rent: $23",
+      null
+    ]
+  },
+  "Japan": {
+    "cost": "¥9500",
+    "activities": [
+      null,
+      "水道光熱費: ¥800",
+      "朝食: ¥900",
+      "交通: ¥600",
+      "買い物: ¥1800",
+      "夕食: ¥1600",
+      "娯楽: ¥1500",
+      "家賃: ¥2300",
+      null
+    ]
+  },
+  "Germany": {
+    "cost": "70€",
+    "activities": [
+      null,
+      "Wasser & Strom: 5€",
+      "Frühstück: 6€",
+      "Transport: 4€",
+      "Einkaufen: 16€",
+      "Abendessen: 12€",
+      "Freizeit: 10€",
+      "Miete: 17€",
+      null
+    ]
+  },
+  "Brazil": {
+    "cost": "R$160",
+    "activities": [
+      null,
+      "Água e energia: R$12",
+      "Café da manhã: R$10",
+      "Transporte: R$8",
+      "Mercado: R$35",
+      "Jantar: R$30",
+      "Lazer: R$25",
+      "Aluguel: R$40",
+      null
+    ]
+  },
+  "India": {
+    "cost": "₹2000",
+    "activities": [
+      null,
+      "Utilities: ₹200",
+      "Breakfast: ₹150",
+      "Transport: ₹120",
+      "Groceries: ₹400",
+      "Dinner: ₹350",
+      "Entertainment: ₹300",
+      "Rent: ₹480",
+      null
+    ]
+  },
+  "Mexico": {
+    "cost": "$600 MXN",
+    "activities": [
+      null,
+      "Servicios: $40",
+      "Desayuno: $50",
+      "Transporte: $30",
+      "Compras: $120",
+      "Cena: $100",
+      "Ocio: $90",
+      "Renta: $170",
+      null
+    ]
+  },
+  "Australia": {
+    "cost": "AU$95",
+    "activities": [
+      null,
+      "Utilities: AU$7",
+      "Breakfast: AU$10",
+      "Transport: AU$6",
+      "Groceries: AU$20",
+      "Dinner: AU$18",
+      "Activity: AU$12",
+      "Rent: AU$22",
+      null
+    ]
+  },
+  "Italy": {
+    "cost": "65€",
+    "activities": [
+      null,
+      "Acqua e luce: 4€",
+      "Colazione: 5€",
+      "Trasporto: 3€",
+      "Spesa: 15€",
+      "Cena: 11€",
+      "Svago: 10€",
+      "Affitto: 17€",
+      null
+    ]
+  },
+  "Spain": {
+    "cost": "60€",
+    "activities": [
+      null,
+      "Agua y luz: 4€",
+      "Desayuno: 4€",
+      "Transporte: 3€",
+      "Compras: 14€",
+      "Cena: 10€",
+      "Ocio: 9€",
+      "Alquiler: 16€",
+      null
+    ]
+  },
+  "Russia": {
+    "cost": "₽3200",
+    "activities": [
+      null,
+      "Коммунальные: ₽300",
+      "Завтрак: ₽400",
+      "Транспорт: ₽200",
+      "Покупки: ₽700",
+      "Ужин: ₽600",
+      "Развлечения: ₽500",
+      "Аренда: ₽500",
+      null
+    ]
+  },
+  "Canada": {
+    "cost": "CA$85",
+    "activities": [
+      null,
+      "Utilities: CA$6",
+      "Breakfast: CA$9",
+      "Transport: CA$5",
+      "Groceries: CA$18",
+      "Dinner: CA$15",
+      "Fun: CA$12",
+      "Rent: CA$20",
+      null
+    ]
+  },
+  "China": {
+    "cost": "¥250",
+    "activities": [
+      null,
+      "水电费: ¥20",
+      "早餐: ¥25",
+      "交通: ¥15",
+      "超市: ¥50",
+      "晚餐: ¥45",
+      "娱乐: ¥40",
+      "租金: ¥55",
+      null
+    ]
+  },
+  "Argentina": {
+    "cost": "$9500 ARS",
+    "activities": [
+      null,
+      "Servicios: $800",
+      "Desayuno: $900",
+      "Transporte: $600",
+      "Compras: $2000",
+      "Cena: $1800",
+      "Ocio: $1300",
+      "Alquiler: $2100",
+      null
+    ]
+  },
+  "South Korea": {
+    "cost": "₩90000",
+    "activities": [
+      null,
+      "전기/수도: ₩8000",
+      "아침식사: ₩9000",
+      "교통: ₩7000",
+      "장보기: ₩20000",
+      "저녁: ₩17000",
+      "여가: ₩12000",
+      "월세: ₩17000",
+      null
+    ]
   }
-  
+}
