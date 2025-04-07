@@ -190,29 +190,73 @@ button:hover {
   
   #activityDetails h3 {
     font-family: 'Press Start 2P', cursive;
-    font-size: 16px;
-    color: #f472b6; /* rose galactique */
+    font-size: 18px;
+    color: #38bdf8;
     margin-bottom: 1rem;
-    text-shadow: 0 0 6px #f472b6;
+    text-shadow: 0 0 8px #38bdf8;
+    letter-spacing: 1px;
+    text-transform: uppercase;
   }
   
   #activityDetails ul {
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.05);
-    padding: 1.5rem 2rem;
-    border-radius: 16px;
-    border: 2px dashed #f472b6;
-    box-shadow: 0 0 20px rgba(244, 114, 182, 0.3);
-    font-family: 'Press Start 2P', cursive;
-    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    padding: 2rem;
+    width: 400px;
+    height: 400px; /* ✅ forme circulaire réelle */
+    border-radius: 50%;
+    background: radial-gradient(circle at center, rgba(24, 24, 60, 0.95), rgba(8, 8, 30, 0.9));
+    border: 2px dotted #38bdf8;
+    box-shadow:
+      0 0 20px rgba(56, 189, 248, 0.4),
+      inset -10px -10px 20px rgba(0, 0, 0, 0.3),
+      inset 5px 5px 10px rgba(255, 255, 255, 0.05),
+      0 0 50px rgba(56, 189, 248, 0.2);
+    font-family: 'Press Start 2P', monospace;
+    font-size: 9.5px;
     color: #ffffff;
     list-style: none;
     text-align: left;
+    backdrop-filter: blur(5px);
+    position: relative;
   }
   
-  #activityDetails ul li {
-    margin: 6px 0;
+
+  
+  #activityDetails ul::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 170%;
+    height: 30%;
+    transform: translate(-50%, -50%) rotate(-20deg);
+    border: 1.5px dashed rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.03);
+    pointer-events: none;
   }
+  
+  
+    
+  
+  #activityDetails ul li {
+    margin: 10px 0;
+    padding-left: 0.5rem;
+    position: relative;
+  }
+  
+  #activityDetails ul li::before {
+    content: '▸';
+    position: absolute;
+    left: -12px;
+    color: #facc15;
+    text-shadow: 0 0 4px #facc15;
+  }
+  
   
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
@@ -221,21 +265,66 @@ button:hover {
   
   #activityDetails.rose-style h3 {
     color: #f472b6;
-    text-shadow: 0 0 6px #f472b6;
+    text-shadow: 0 0 8px #f472b6;
   }
-  
-  #activityDetails.bleu-style h3 {
-    color: #38bdf8;
-    text-shadow: 0 0 6px #38bdf8;
-  }
-  
   #activityDetails.rose-style ul {
     border-color: #f472b6;
     box-shadow: 0 0 20px rgba(244, 114, 182, 0.3);
   }
   
+  #activityDetails.bleu-style h3 {
+    color: #38bdf8;
+    text-shadow: 0 0 8px #38bdf8;
+  }
   #activityDetails.bleu-style ul {
     border-color: #38bdf8;
     box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
   }
+  
+  
+  #search-container {
+    margin-top: 9rem;
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #country-search {
+    width: 600px;
+    padding: 1.2rem 2rem;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(90deg, #ffee33, #ffc710, #fb923c, #f97316, #c2410c);
+    background-size: 400% 100%;
+    animation: gradientSoleil 10s ease infinite;
+    border: none;
+    border-radius: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0 12px #fb923c, 0 0 30px #facc15;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+  }
+  @keyframes gradientSoleil {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+    
+  
+  #country-search::placeholder {
+    color: rgb(255, 255, 255);
+   
+  }
+  
+  
+  path.dimmed {
+    opacity: 0.15; /* ✅ les autres deviennent sombres */
+    transition: opacity 0.3s ease;
+  }
+  
+  
   
