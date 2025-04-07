@@ -21,7 +21,6 @@ Promise.all([
   d3.json("/data/data.json")
 ]).then(([worldData, costData]) => {
   const altNames = {
-    "United States of America": "United States of America",
     "Japan": "Japan",
     "France": "France"
   };

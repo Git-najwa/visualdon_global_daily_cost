@@ -4,58 +4,73 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Combien coûte un jour de vie ?</title>
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- D3.js & TopoJSON -->
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <script src="https://unpkg.com/topojson@3"></script>
+
+  <!-- Styles personnalisés -->
   <link rel="stylesheet" href="src/css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
 </head>
-<body>
+
+<body class="bg-black text-white font-['Press_Start_2P']">
+
   <div class="container mx-auto p-6 text-center">
-    
+
     <div id="map-container" class="bg-gray-800 p-4 rounded-lg shadow-md">
-     <br> 
       <h1 class="text-3xl font-bold mb-6">Combien coûte un jour de vie dans le monde ?</h1>
+
       <svg id="map" width="800" height="400"></svg>
       <img src="/data/assets/rocket-pixel.webp" id="rocket" alt="rocket" />
-      <div class="flex flex-col items-center mt-16 space-y-4" id="spaceship-section">
+
+      <!-- Section soucoupe + bouton -->
+      <div class="flex flex-col items-center mt-16 space-y-8" id="spaceship-section">
         <button id="toggleView" class="animated-button">
-         Voir les 3 pays les moins chers
+          Voir les 3 pays les moins chers
         </button>
-        <div id="cockpit-chart" class="relative mt-6"></div>
+
+        <div id="cockpit-chart" class="mt-6"></div>
+
+        <!-- Détails des activités -->
+        <div id="activityDetails" class="mt-8"></div>
       </div>
-      <div id="cockpit-chart" class="mt-16"></div>
-      <div id="cockpit-chart" class="mt-16"></div>  
-        <!-- Circular graphique -->
-    <section id="circular-visual">
-      <div id="circular-barplot" class="my-16"></div>
-    </section> 
-      <!-- Effet sonore rétro -->
-<audio id="soucoupe-audio" src="/data/assets/soucoupe.wav" preload="auto"></audio>
-     
+
+      <!-- Visualisation circulaire -->
+      <section id="circular-visual">
+        <div id="circular-barplot" class="my-16"></div>
+      </section> 
+
+      <!-- Son soucoupe -->
+      <audio id="soucoupe-audio" src="/data/assets/soucoupe.wav" preload="auto"></audio>
     </div>
 
+    <!-- Visualisation vaisseau -->
     <section id="space-visual">
       <div id="spaceship-chart" class="h-[600px] my-32"></div>
     </section>
 
+    <!-- Overlay pixel -->
     <div class="pixel-overlay"></div>
 
-     <!-- Bloc info repositionné en bas à gauche -->
-  <div id="country-info" class="info-box hidden">
-    <h2 id="country-name">Canada</h2>
-    <p id="daily-cost">Coût moyen par jour : CA$75</p>
-    <button onclick="startSimulation()">Voir une journée type</button>
-  </div>
-</div>
+    <!-- Info boîte pays -->
+    <div id="country-info" class="info-box hidden">
+      <h2 id="country-name">Canada</h2>
+      <p id="daily-cost">Coût moyen par jour : CA$75</p>
+      <button onclick="startSimulation()">Voir une journée type</button>
+    </div>
 
-    <div id="day-simulation" class="mt-8 hidden ">
+    <!-- Simulation de la journée -->
+    <div id="day-simulation" class="mt-8 hidden">
       <h2 class="text-2xl font-bold">Déroulement de la journée</h2>
       <div id="timeline" class="mt-4"></div>
     </div>
   </div>
 
+  <!-- Scripts -->
   <script type="module" src="src/js/map.js"></script>
   <script src="src/js/script.js"></script>
   <script type="module" src="/src/js/radar.js"></script>

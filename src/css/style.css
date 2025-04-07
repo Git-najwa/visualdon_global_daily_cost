@@ -182,4 +182,60 @@ button:hover {
   }  
  
   
+  #activityDetails {
+    margin-top: 2rem;
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  #activityDetails h3 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    color: #f472b6; /* rose galactique */
+    margin-bottom: 1rem;
+    text-shadow: 0 0 6px #f472b6;
+  }
+  
+  #activityDetails ul {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem 2rem;
+    border-radius: 16px;
+    border: 2px dashed #f472b6;
+    box-shadow: 0 0 20px rgba(244, 114, 182, 0.3);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    color: #ffffff;
+    list-style: none;
+    text-align: left;
+  }
+  
+  #activityDetails ul li {
+    margin: 6px 0;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  #activityDetails.rose-style h3 {
+    color: #f472b6;
+    text-shadow: 0 0 6px #f472b6;
+  }
+  
+  #activityDetails.bleu-style h3 {
+    color: #38bdf8;
+    text-shadow: 0 0 6px #38bdf8;
+  }
+  
+  #activityDetails.rose-style ul {
+    border-color: #f472b6;
+    box-shadow: 0 0 20px rgba(244, 114, 182, 0.3);
+  }
+  
+  #activityDetails.bleu-style ul {
+    border-color: #38bdf8;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+  }
   
