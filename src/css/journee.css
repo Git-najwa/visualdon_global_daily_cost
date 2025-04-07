@@ -368,3 +368,57 @@ body::-webkit-scrollbar,
 .ticket-shape {
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
+
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 8px;
+  width: 100%;
+  background: #222;
+  z-index: 9999;
+}
+#progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #f35c20, #0a0a3d);
+  transition: width 0.3s ease;
+}
+
+.narration-popup {
+  position: fixed;
+  top: 60px; /* ✅ placé en haut */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #000;
+  width: 470px;
+  color: #fff;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #fff;
+  z-index: 2000;
+  animation: fadeInDown 0.4s ease-out, fadeOut 0.4s ease-in 4.6s forwards;
+  text-align: center;
+  pointer-events: none;
+}
+@keyframes fadeInDown {
+  from {
+    transform: translateX(-50%) translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+
