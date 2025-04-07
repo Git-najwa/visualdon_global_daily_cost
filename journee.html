@@ -7,8 +7,6 @@
 
   <!-- Pixel font -->
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
-
-  <!-- Ton CSS pixel -->
   <link rel="stylesheet" href="/src/css/journee.css" />
 </head>
 <body>
@@ -17,13 +15,37 @@
   <div class="journey-container">
     <!-- Introduction avec le nom du pays -->
     <div id="intro" class="intro"></div>
-    
 
     <!-- Scroll narratif des étapes de la journée -->
     <div id="timeline" class="timeline"></div>
+  </div>
 
-    <!-- Conclusion, graphiques, comparaisons, etc -->
-    <div id="conclusion" class="conclusion"></div>
+  <!-- Widget Total + bouton Voir le ticket -->
+  <div id="scroll-invoice">
+    <div class="label">Total :</div>
+    <span id="invoice-total">0.00€</span>
+    <button id="ticket-btn">🧾 
+      Voir le ticket</button>
+  </div>
+
+
+  <!-- Popup Ticket -->
+  <div id="full-invoice" class="ticket-shape hidden">
+    <div class="invoice-content">
+      <button id="close-ticket">✖</button>
+      <h2 id="ticket-title">🧾 TICKET DU JOUR</h2>
+      <div class="barcode"></div>
+      <ul id="ticket-lines"></ul>
+      <div id="ticket-total">Total : <span>0.00€</span></div>
+    </div>
+  </div>
+
+  <!-- Conclusion -->
+  <div id="conclusion" class="conclusion">
+    <h2>Fin de journée !</h2>
+    <p>Tu veux comparer avec d’autres pays ?</p>
+    <button onclick="window.location.href='/'">← Retour à la carte</button>
+    <br>
   </div>
 
   <!-- Script JS -->
