@@ -1,17 +1,37 @@
-const topCountries = [
-    { name: "États-Unis", value: 85 },
-    { name: "France", value: 75 },
-    { name: "Australie", value: 57 }
-  ];
-  
-  const lowCountries = [
-    { name: "Argentine", value: 20 },
-    { name: "Inde", value: 22 },
-    { name: "Brésil", value: 30 }
-  ];
-  
-  let showingLow = false;
-  let currentData = topCountries;
+let topCountries = [];
+let lowCountries = [];
+let currentData = [];
+let showingLow = false;
+
+// Chargement de data.json
+fetch('data/data.json')
+  .then(response => response.json())
+  .then(data => {
+    // Transformer l'objet en tableau { name, value }
+    const countries = Object.entries(data).map(([name, info]) => ({
+      name,
+      value: parseFloat(info.cost.replace("€", ""))
+    }));
+
+    // Trier les pays par coût décroissant
+    countries.sort((a, b) => b.value - a.value);
+
+    // Sélectionner les 3 plus chers et les 3 moins chers
+    topCountries = countries.slice(0, 3);
+    lowCountries = countries.slice(-3);
+
+    currentData = topCountries;
+
+    // Initialisation du SVG une fois les données chargées
+    d3.select("#cockpit-chart")
+      .append("svg")
+      .attr("width", 300)
+      .attr("height", 300)
+      .style("overflow", "visible");
+
+    drawUFO(); // Dessiner la première fois
+  });
+
   
   function drawUFO(color = "#38bdf8") {
     const group = d3.select("#cockpit-chart svg g");
