@@ -2,7 +2,7 @@
    BASE: Police & ambiance
 ================================== */
 body {
-  background: linear-gradient(to bottom, #ff5028 0%, #0a0a3d 100%);
+  background: linear-gradient(to bottom, #f35c20 0%, #0a0a3d 100%);
   color: white;
   font-family: 'Press Start 2P', cursive;
   margin: 0;
@@ -22,10 +22,10 @@ body {
 a.back-link {
   display: block;
   padding: 1rem;
-  color: hsl(289, 100%, 96%);
+  color: hsl(0, 0%, 100%);
   text-decoration: none;
   font-size: 0.7rem;
-  text-shadow: 0 0 4px #7f1891;
+  text-shadow: 0 0 4px #d64f1f;
 }
 
 /* ================================
@@ -37,13 +37,13 @@ a.back-link {
 }
 .intro h1 {
   font-size: 2.2rem;
-  color: hsl(289, 100%, 96%);
-  text-shadow: 0 0 5px #7f1891;
+  color: hsl(0, 0%, 100%);
+  text-shadow: 0 0 5px #d64f1f;
   margin-bottom: 1rem;
 }
 .intro p {
   font-size: 1rem;
-  color: #fbdfff;
+  color: #ffdedb;
 }
 
 /* ================================
@@ -129,6 +129,7 @@ a.back-link {
   text-transform: uppercase;
   animation: pulse 2s infinite ease-in-out;
   margin-bottom: 4rem;
+  margin-top: 1rem;
 }
 
 @keyframes pulse {
