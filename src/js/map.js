@@ -1,3 +1,8 @@
+import { drawCircularChart } from './circularChart.js';
+
+  drawCircularChart(); // appel unique ici
+
+
 const svg = d3.select("#map");
 svg.attr("width", 1200).attr("height", 600); // ⬅️ Taille plus grande
 const width = +svg.attr("width");
@@ -26,6 +31,7 @@ Promise.all([
   svg.selectAll("path")
     .data(countries)
     .join("path")
+    .attr("class", "map-path" )
     .attr("d", path)
     .attr("fill", d => costData[altNames[d.properties.name] || d.properties.name] ? "#3b82f6" : "#1111aa")
     .attr("stroke", "#000033")
@@ -47,7 +53,7 @@ Promise.all([
       const displayName = altNames[countryName] || countryName;
 
       // Reset des couleurs
-      d3.selectAll("path").attr("fill", d =>
+      d3.selectAll(".map-path").attr("fill", d =>
         costData[altNames[d.properties.name] || d.properties.name] ? "#3b82f6" : "#1111aa"
       );
       d3.select(this).attr("fill", "#ff00cc");
@@ -61,5 +67,6 @@ Promise.all([
       }
 
       document.getElementById("day-simulation").classList.add("hidden");
+      
     });
 });

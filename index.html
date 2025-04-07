@@ -26,7 +26,11 @@
         <div id="cockpit-chart" class="relative mt-6"></div>
       </div>
       <div id="cockpit-chart" class="mt-16"></div>
-      <div id="cockpit-chart" class="mt-16"></div>   
+      <div id="cockpit-chart" class="mt-16"></div>  
+        <!-- Circular graphique -->
+    <section id="circular-visual">
+      <div id="circular-barplot" class="my-16"></div>
+    </section> 
       <!-- Effet sonore rétro -->
 <audio id="soucoupe-audio" src="/data/assets/soucoupe.wav" preload="auto"></audio>
      
@@ -46,15 +50,14 @@
   </div>
 </div>
 
-    <div id="day-simulation" class="mt-8 hidden">
+    <div id="day-simulation" class="mt-8 hidden ">
       <h2 class="text-2xl font-bold">Déroulement de la journée</h2>
       <div id="timeline" class="mt-4"></div>
     </div>
   </div>
 
-  <script src="src/js/map.js"></script>
+  <script type="module" src="src/js/map.js"></script>
   <script src="src/js/script.js"></script>
   <script type="module" src="/src/js/radar.js"></script>
-
 </body>
 </html>

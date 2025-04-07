@@ -52,4 +52,6 @@ if (!country || !data[country]) {
     <p>Tu veux comparer avec d’autres pays ?</p>
     <button onclick="window.location.href='/'">Retour à la carte</button>
   `;
+
+  
 }

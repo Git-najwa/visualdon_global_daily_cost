@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "## **📖 Contexte**   Le projet **\"Combien coûte un jour de vie dans le monde ?\"** vise à comparer le coût de la vie dans différents pays à travers une visualisation de données interactive. L'objectif est de permettre aux utilisateurs d'explorer les différences de dépenses quotidiennes selon leur lieu de résidence ou d'expatriation.",
   "main": "vite.config.js",
+  "type": "module",
   "scripts": {
     "dev": "vite",
   "build": "vite build",

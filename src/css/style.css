@@ -159,5 +159,27 @@ button:hover {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
   }
+
+  /* Graphique Circulaire  */
+  #circular-barplot {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+  svg {
+    display: block;
+    margin: 0 auto;
+  }
+ 
+  #circular-barplot svg {
+    z-index: 1;
+    position: relative;
+  }  
+ 
   
   
