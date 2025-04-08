@@ -327,4 +327,17 @@ button:hover {
   }
   
   
+  .compare-hint {
+    display: inline-block;
+    background: rgba(10,10,30,0.7);
+    padding: 1rem 2rem;
+    border: 2px dotted #15fafa;
+    box-shadow: 0 0 12px #15fafa88, 0 0 40px #0ff3;
+    color: #ffffff;
+    font-size: 0.7rem;
+    border-radius: 12px;
+    text-shadow: 0 0 4px #15fafa;
+    margin-bottom: 2rem;
+  }
+  
   

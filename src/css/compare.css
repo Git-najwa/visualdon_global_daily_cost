@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(to bottom, #0a0a3d, #1a1a40);
+    background: linear-gradient(to bottom, #8a8aff, #3f3f9c);
     font-family: 'Press Start 2P', cursive;
     color: white;
     margin: 0;
@@ -28,11 +28,11 @@ body {
   }
   
   .country-block {
-    background: radial-gradient(circle at top, #0e0e40, #000022);
+    background: radial-gradient(circle at top, #a9a9ff, #000022);
     padding: 1.5rem;
     border-radius: 30px;
     width: 420px;
-    box-shadow: 0 0 25px #15fafa88, 0 0 10px #1a1a40 inset;
+    box-shadow: 0 0 25px #4715fa88, 0 0 10px #201184 inset;
     transition: transform 0.3s ease;
   }
   .country-block:hover {
