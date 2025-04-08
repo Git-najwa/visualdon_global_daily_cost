@@ -1,3 +1,4 @@
+/* === STRUCTURE DE BASE === */
 body {
     background: linear-gradient(to bottom, #8a8aff, #3f3f9c);
     font-family: 'Press Start 2P', cursive;
@@ -20,6 +21,7 @@ body {
     color: #ffc5fe;
   }
   
+  /* === BLOCS COMPARATIFS === */
   .compare-wrapper {
     display: flex;
     justify-content: center;
@@ -47,6 +49,7 @@ body {
     text-shadow: 0 0 1.5px #ffffff, 0 0 10px #fff5;
   }
   
+  /* === ACTIVITÉS === */
   .activity-block {
     background-size: cover;
     background-position: center;
@@ -76,82 +79,66 @@ body {
     box-shadow: 0 0 4px #facc15;
     z-index: 1;
   }
+  
   .bubble {
     position: absolute;
     bottom: 20px;
     left: 20px;
-  
     background: radial-gradient(circle at top left, #f8f8f8, #e4e4e4);
     color: #111;
     padding: 10px 26px;
-  
     font-size: 1rem;
     font-weight: bold;
     line-height: 1.4;
     text-align: center;
-  
     border-radius: 50px;
     max-width: 220px;
     box-shadow:
       0 4px 10px rgba(0, 0, 0, 0.25),
       inset -2px -2px 4px rgba(255, 255, 255, 0.8),
       inset 2px 2px 4px rgba(0, 0, 0, 0.05);
-  
     font-family: 'Pixelify Sans', sans-serif;
     z-index: 10;
     transition: all 0.3s ease;
   }
   
-  .bubble.more {
-    background: radial-gradient(circle, #ff99c8, #ffc0cb);
-  }
-  .bubble.less {
-    background: radial-gradient(circle, #b0f2b4, #d9f99d);
-  }
-  .bubble.same {
-    background: #eee;
-  }
-  
-  
+  /* === GRAPHIQUE === */
   #comparison-graph {
     position: relative;
     width: 100%;
     max-width: 960px;
     aspect-ratio: 900 / 512;
     margin: 0 auto;
-    
     background-image: url('/data/assets/starfield.gif');
     background-size: cover;
     background-position: center;
-    
     border-radius: 40px;
     overflow: hidden;
-  
-    padding: 0; /* on enlève le padding pour que le SVG remplisse à 100% */
-    box-shadow:
-      0 0 50px #ff9ff3aa,
-      0 0 20px #f315fa66 inset,
-      0 0 40px #38bdf8aa inset;
-  
+    box-shadow: 0 0 50px #ff9ff3aa, 0 0 20px #f315fa66 inset, 0 0 40px #38bdf8aa inset;
     backdrop-filter: blur(2px);
-    border: 0px solid rgba(255, 255, 255, 0.08);
     transition: transform 0.3s ease;
   }
   
   #comparison-graph:hover {
     transform: scale(1.01);
-    box-shadow:
-      0 0 60px #fc9bff,
-      0 0 25px #9ae1ff inset;
   }
   
+  #comparison-graph svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 512px;
+    margin: 0 auto;
+    border-radius: 24px;
+  }
   
   #comparison-graph::before {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: radial-gradient(#ffffff08 1px, transparent 1px),
-                      radial-gradient(#ffffff05 1px, transparent 1px);
+    background-image:
+      radial-gradient(#ffffff08 1px, transparent 1px),
+      radial-gradient(#ffffff05 1px, transparent 1px);
     background-size: 8px 8px, 16px 16px;
     background-position: 0 0, 4px 4px;
     z-index: 1;
@@ -161,43 +148,68 @@ body {
     mix-blend-mode: screen;
   }
   
-  #comparison-graph svg {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-height: 512px; /* hauteur maximum alignée avec l’image */
-    margin: 0 auto;
-    border-radius: 24px;
-  }  
-  
+  /* === POPUP COMMUN === */
   .fullscreen-popup {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(10, 10, 30, 0.95);
+    inset: 0;
+    background: radial-gradient(circle at center, #050530 60%, #000 100%);
+    backdrop-filter: blur(6px);
+    z-index: 9999;
     display: flex;
-    justify-content: center;
     align-items: center;
-    z-index: 200;
-    backdrop-filter: blur(5px);
-    animation: fadeIn 0.3s ease-out;
+    justify-content: center;
+    padding: 0;
   }
+  
   .popup-content {
     background: linear-gradient(145deg, #1a1a40, #0e0e20);
     border: 4px double #15e3fa;
     box-shadow: 0 0 16px #38bdf8cc, 0 0 40px #aa15faaa;
     border-radius: 24px;
     padding: 2rem;
-    max-width: 600px;
-    width: 90%;
     text-align: center;
     color: #fff;
     font-family: 'Press Start 2P', cursive;
+    animation: zoomIn 0.4s ease;
+    width: auto;
+    max-width: 95vw;
+    max-height: 90vh;
+    overflow: auto;
     position: relative;
+  }
+  
+  .popup-content.graph-popup {
+    background-image: url('/data/assets/starfield.gif');
+    background-size: cover;
+    background-position: center;
+    border-radius: 40px;
+    box-shadow: 0 0 50px #ff9ff3aa, 0 0 20px #f315fa66 inset, 0 0 40px #38bdf8aa inset;
+    backdrop-filter: blur(2px);
+    width: 95vw;
+    max-width: 1400px;
+    height: auto;
+    max-height: 90vh;
+    padding: 2rem;
+    overflow: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     animation: zoomIn 0.4s ease;
   }
+  
+  
+  #fullscreen-graph {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .graph-popup svg {
+    width: 100% !important;
+    height: auto;
+  }
+  
   .popup-content img {
     max-width: 100%;
     border-radius: 16px;
@@ -205,6 +217,7 @@ body {
     box-shadow: 0 0 8px #6e7aff;
     image-rendering: pixelated;
   }
+  
   .popup-content h3 {
     font-size: 1rem;
     color: #ff85f7;
@@ -218,20 +231,26 @@ body {
     font-size: 0.9rem;
     color: #ffffffcc;
   }
+  
   .close-btn {
     position: absolute;
-    top: 16px;
-    right: 20px;
-    font-size: 1.5rem;
+    top: 1.5rem;
+    right: 2rem;
+    font-size: 2.2rem;
     color: #fff;
+    background: #ec4899;
+    padding: 0.2rem 0.8rem;
+    border-radius: 50%;
     cursor: pointer;
-    text-shadow: 0 0 6px #ff00cc, 0 0 12px #ff00cc;
+    box-shadow: 0 0 10px #ec4899, 0 0 30px #ec4899;
     transition: transform 0.2s ease;
+    z-index: 10;
   }
   
   .close-btn:hover {
-    transform: scale(1.6);
+    transform: scale(1.4);
   }
+  
   @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -241,5 +260,48 @@ body {
     from { transform: scale(0.8); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
   }
-            
+  
+  .popup-content.popup-activity {
+    width: auto;
+    max-width: 600px;
+    max-height: 85vh;
+    overflow: auto;
+    padding: 2rem;
+    background: linear-gradient(145deg, #1a1a40, #0e0e20);
+    border: 4px double #15e3fa;
+    border-radius: 24px;
+    box-shadow: 0 0 16px #38bdf8cc, 0 0 40px #aa15faaa;
+    font-family: 'Press Start 2P', cursive;
+    animation: zoomIn 0.4s ease;
+  }
+  
+  /* === POPUP ACTIVITÉ (petite) === */
+.popup-content.popup-activity {
+    background: linear-gradient(145deg, #1a1a40, #0e0e20);
+    border: 4px double #15e3fa;
+    box-shadow: 0 0 16px #38bdf8cc, 0 0 40px #aa15faaa;
+    border-radius: 24px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 600px;
+    max-height: 85vh;
+    overflow-y: auto;
+    text-align: center;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    animation: zoomIn 0.4s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .popup-content.popup-activity img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+    image-rendering: pixelated;
+    box-shadow: 0 0 10px #6e7aff;
+  }
   
