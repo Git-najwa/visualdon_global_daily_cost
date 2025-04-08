@@ -1,0 +1,93 @@
+body {
+    background: linear-gradient(to bottom, #0a0a3d, #1a1a40);
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    margin: 0;
+    padding: 2rem;
+    overflow-x: hidden;
+  }
+  
+  .back-link {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    font-size: 0.7rem;
+    text-shadow: 0 0 6px #ffffff;
+    transition: color 0.2s ease;
+  }
+  .back-link:hover {
+    color: #ffc5fe;
+  }
+  
+  .compare-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+  
+  .country-block {
+    background: radial-gradient(circle at top, #0e0e40, #000022);
+    padding: 1.5rem;
+    border-radius: 30px;
+    width: 420px;
+    box-shadow: 0 0 25px #15fafa88, 0 0 10px #1a1a40 inset;
+    transition: transform 0.3s ease;
+  }
+  .country-block:hover {
+    transform: scale(1.015);
+  }
+  
+  .country-block h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    text-shadow: 0 0 2px #ffffff, 0 0 10px #fff5;
+  }
+  
+  .activity-block {
+    background-size: cover;
+    background-position: center;
+    height: 190px;
+    border-radius: 14px;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 20px #0a0a3d, inset 0 0 10px #3b82f6;
+    animation: floatScene 6s ease-in-out infinite;
+  }
+  
+  @keyframes floatScene {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+  }
+  
+  .time {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #000000cc;
+    color: #ffcaf4;
+    padding: 4px 10px;
+    font-size: 0.55rem;
+    border-radius: 8px;
+    box-shadow: 0 0 4px #facc15;
+    z-index: 1;
+  }
+  
+  .bubble {
+    position: absolute;
+    bottom: 14px;
+    left: 14px;
+    background: rgba(255, 255, 255, 0.96);
+    color: #000;
+    padding: 10px 14px;
+    font-size: 0.55rem;
+    border-radius: 20px;
+    max-width: 80%;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    font-family: 'Pixelify Sans', sans-serif;
+  }
+  
