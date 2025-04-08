@@ -15,9 +15,10 @@ body {
 }
 
 #map-container {
-    position: relative;
-    background: #0000007c;
-  }
+  position: relative;
+  background: #0000007c;
+  height: 700px; /* ou la même valeur que ton <svg> */
+}
 
 button {
     cursor: pointer;
@@ -56,52 +57,81 @@ button:hover {
   
 /* Info dans un coin comme un HUD */
 .info-box {
-    position: absolute;
-    bottom: 0px;
-    left: 50px;
-    background: rgba(5, 5, 77, 0.8);
-    padding: 1.5rem;
-    border-radius: 12px;
-    text-align: left;
-    font-family: 'Press Start 2P', cursive;
-    color: white;
-    box-shadow: 0 0 12px #000;
-    z-index: 30;
-    max-width: 300px;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 50;
+
+  background: rgba(5, 5, 77, 0.95);
+  padding: 1.5rem 2rem;
+  border-radius: 20px;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  box-shadow: 0 0 18px #15e3fa, 0 0 30px #0ff;
+  max-width: 360px;
+  font-size: 12.5px;
+  backdrop-filter: blur(4px);
+  animation: fadeInBox 0.4s ease-out;
+}
+
+
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 30px);
   }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
   
-  .info-box h2 {
-    font-size: 1rem;
-    color: #ffffff;
-    margin-bottom: 0.5 rem;
-    text-shadow: 0 0 4px #15e3fa;
-  }
+.info-box h2 {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem; /* ✅ corrigé ici */
+  text-shadow: 0 0 4px #15e3fa;
+}
   
-  .info-box p {
-    font-size: 0.7rem;
-    color: #f0f0f0;
-    margin-bottom: 1rem;
-  }
+.info-box p {
+  font-size: 0.75rem;
+  color: #f0f0f0;
+  margin-bottom: 1rem;
+}
   
-  .info-box button {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 0.6rem;
-    color: #0a0a3d;
-    background-color: #15e3fa;
-    border: 3px solid #0a0a3d;
-    padding: 8px 12px;
-    border-radius: 10px;
-    cursor: pointer;
-    text-transform: uppercase;
-    box-shadow: 0 0 5px #15e3fa, 0 0 10px #facc15;
-    transition: all 0.3s ease;
-  }
+ 
+.info-box button {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
+  color: #0a0a3d;
+  background-color: #15e3fa;
+  border: 3px solid #0a0a3d;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 0 0 5px #15e3fa, 0 0 10px #facc15;
+  transition: all 0.3s ease;
+}
   
-  .info-box button:hover {
-    background-color: #fff;
-    color: #000;
-    box-shadow: 0 0 10px #fff, 0 0 20px #facc15;
+
+.info-box button:hover {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 0 12px #fff, 0 0 25px #facc15;
+}
+
+@keyframes fadeInBox {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
   
   
   /* Fusée  */

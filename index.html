@@ -28,25 +28,25 @@
     </div>
 <br> 
 <br>
-    <!-- Carte + Fusée -->
-    <div id="map-container" class="relative bg-[#0000007c] rounded-lg shadow-lg pb-10">
-      <div id="tooltip" class="hidden"></div>
-      <svg id="map" width="1400" height="700"></svg>
-      <img src="/data/assets/rocket-pixel.webp" id="rocket" alt="rocket" />
-    </div>
 
-    <!-- Boîte info pays (désormais plus bas) -->
-    <div id="country-info" class="info-box hidden mt-12">
-      <h2 id="country-name">Canada</h2>
-      <p id="daily-cost">Coût moyen par jour : CA$75</p>
-      <button onclick="startSimulation()">Voir une journée type</button>
-    </div>
+<div id="map-container">
+  <svg id="map" width="1400" height="700"></svg>
+  <img src="/data/assets/rocket-pixel.webp" id="rocket" alt="rocket" />
+
+  <div id="country-info" class="info-box hidden">
+    <h2 id="country-name">Canada</h2>
+    <p id="daily-cost">Coût moyen par jour : 22€</p>
+    <button onclick="startSimulation()">VOIR UNE JOURNÉE TYPE</button>
+  </div>
+</div>
 
     <!-- Section soucoupe + bouton -->
     <div class="flex flex-col items-center mt-16 space-y-8" id="spaceship-section">
       <button id="toggleView" class="animated-button">
         Voir les 3 pays les moins chers
       </button>
+
+
 
       <div id="cockpit-chart" class="mt-6"></div>
 
