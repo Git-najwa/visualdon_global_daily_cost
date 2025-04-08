@@ -50,7 +50,7 @@ body {
   .activity-block {
     background-size: cover;
     background-position: center;
-    height: 190px;
+    height: 250px;
     border-radius: 14px;
     margin-bottom: 2rem;
     position: relative;
@@ -76,20 +76,42 @@ body {
     box-shadow: 0 0 4px #facc15;
     z-index: 1;
   }
-  
   .bubble {
     position: absolute;
-    bottom: 14px;
-    left: 14px;
-    background: rgba(255, 255, 255, 0.96);
-    color: #000;
-    padding: 10px 14px;
-    font-size: 0.55rem;
-    border-radius: 20px;
-    max-width: 80%;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    bottom: 20px;
+    left: 20px;
+  
+    background: radial-gradient(circle at top left, #f8f8f8, #e4e4e4);
+    color: #111;
+    padding: 10px 26px;
+  
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    text-align: center;
+  
+    border-radius: 50px;
+    max-width: 220px;
+    box-shadow:
+      0 4px 10px rgba(0, 0, 0, 0.25),
+      inset -2px -2px 4px rgba(255, 255, 255, 0.8),
+      inset 2px 2px 4px rgba(0, 0, 0, 0.05);
+  
     font-family: 'Pixelify Sans', sans-serif;
+    z-index: 10;
+    transition: all 0.3s ease;
   }
+  
+  .bubble.more {
+    background: radial-gradient(circle, #ff99c8, #ffc0cb);
+  }
+  .bubble.less {
+    background: radial-gradient(circle, #b0f2b4, #d9f99d);
+  }
+  .bubble.same {
+    background: #eee;
+  }
+  
   
   #comparison-graph {
     position: relative;

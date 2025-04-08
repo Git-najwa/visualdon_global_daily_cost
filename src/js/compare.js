@@ -14,44 +14,48 @@ if (!country1 || !country2 || !data[country1] || !data[country2]) {
 }
 
 function buildTimeline(containerId, countryName) {
-  const container = document.getElementById(containerId);
-  container.innerHTML = `<h2>${countryName}</h2>`;
-
-  data[countryName].activities.forEach((activity, index) => {
-    const hour = 7 + index * 2;
-    const block = document.createElement("div");
-    block.className = "activity-block";
-
+    const container = document.getElementById(containerId);
+    container.innerHTML = `<h2>${countryName}</h2>`;
+  
     const scenes = [
       "scene1.gif", "scene2.gif", "scene3.gif",
       "scene4.gif", "scene5.gif", "scene6.gif",
       "scene7.gif", "scene8.webp", "scene9.gif",
     ];
-    block.style.backgroundImage = `url('/data/assets/${scenes[index]}')`;
-
-    block.innerHTML = `
-      <div class="time">${hour}:00</div>
-      <div class="bubble">${activity}</div>
-    `;
-    container.appendChild(block);
-  });
-}
-
+  
+    data[countryName].activities.forEach((activity, index) => {
+      // Vérifie que l'activité est bien définie et contient ":"
+      if (!activity || typeof activity !== "string" || !activity.includes(":")) return;
+  
+      const [label, cost] = activity.split(":");
+      const hour = 7 + index * 2;
+  
+      const block = document.createElement("div");
+      block.className = "activity-block";
+      block.style.backgroundImage = `url('/data/assets/${scenes[index]}')`;
+  
+      block.innerHTML = `
+        <div class="time">${hour}:00</div>
+        ${activity ? `<div class="bubble">${activity}</div>` : ""}
+      `;
+  
+      container.appendChild(block);
+    });
+  }
+  
 function drawComparisonGraph(c1, c2) {
     const margin = { top: 100, right: 30, bottom: 150, left: 60 };
-    const width = 900 - margin.left - margin.right;
+    const width = 960 - margin.left - margin.right;
     const height = 400 - margin.top - margin.bottom;
     const totalWidth = width + margin.left + margin.right;
     const totalHeight = height + margin.top + margin.bottom;
   
-    // Création du SVG
     const svgContainer = d3.select("#comparison-graph")
       .append("svg")
       .attr("width", totalWidth)
       .attr("height", totalHeight)
       .style("background", "url('/data/assets/space-bg.gif') center center / cover no-repeat");
   
-    // ✅ Ajout du <rect> centré
     svgContainer.insert("rect", ":first-child")
       .attr("x", 0)
       .attr("y", 0)
@@ -60,22 +64,26 @@ function drawComparisonGraph(c1, c2) {
       .attr("fill", "rgba(10,10,30, 0.6)")
       .attr("rx", 24);
   
-    // Groupe principal avec marges
     const svg = svgContainer.append("g")
       .attr("transform", `translate(${margin.left},${margin.top})`);
   
-    const labels = data[c1].activities.map((_, i) => `${7 + i * 2}:00`);
+    // 🔍 Étape 1 : parser une fois les labels valides
+    const activities = data[c1].activities
+      .map((a) => {
+        if (!a || typeof a !== "string") return null;
+        const parts = a.split(":");
+        if (parts.length < 2) return null;
+        return {
+          label: parts[0].trim(),
+          cost1: parseFloat(parts[1].replace("€", "").trim()),
+          cost2: parseFloat((data[c2].activities || [])[data[c1].activities.indexOf(a)]?.split(":")[1]?.replace("€", "").trim()) || 0
+        };
+      })
+      .filter(d => d && d.label && !isNaN(d.cost1) && !isNaN(d.cost2));
   
-    const getCosts = (country) => data[country].activities.map((a) => {
-      if (!a || typeof a !== "string") return 0;
-      const parts = a.split(":");
-      if (parts.length < 2) return 0;
-      const num = parseFloat(parts[1].replace("€", "").trim());
-      return isNaN(num) ? 0 : num;
-    });
-  
-    const costs1 = getCosts(c1);
-    const costs2 = getCosts(c2);
+    const labels = activities.map(d => d.label);
+    const costs1 = activities.map(d => d.cost1);
+    const costs2 = activities.map(d => d.cost2);
   
     const x = d3.scalePoint().domain(labels).range([0, width]).padding(0.5);
     const y = d3.scaleLinear()
@@ -87,9 +95,10 @@ function drawComparisonGraph(c1, c2) {
       .attr("transform", `translate(0, ${height})`)
       .call(d3.axisBottom(x))
       .selectAll("text")
-      .attr("transform", "rotate(-35)")
-      .style("text-anchor", "end")
-      .style("fill", "#ffffffcc")
+      .style("text-anchor", "middle")
+      .attr("transform", "rotate(-15)")
+      .attr("dy", "3.5em")
+      .style("fill", "#ffffffdd")
       .style("font-size", "10px")
       .style("font-family", "'Press Start 2P', monospace");
   
@@ -99,7 +108,7 @@ function drawComparisonGraph(c1, c2) {
       .style("fill", "#ffffffcc")
       .style("font-family", "'Press Start 2P', monospace");
   
-    // Courbes néon
+    // Courbes
     const line = d3.line()
       .x((d, i) => x(labels[i]))
       .y(d => y(d))
@@ -121,27 +130,20 @@ function drawComparisonGraph(c1, c2) {
       .attr("filter", "url(#glow2)")
       .attr("d", line);
   
-    // Glow filters
+    // Filtres
     const defs = svgContainer.append("defs");
-    defs.append("filter")
-      .attr("id", "glow1")
-      .append("feGaussianBlur")
-      .attr("stdDeviation", "3.5")
-      .attr("result", "coloredBlur");
+    defs.append("filter").attr("id", "glow1")
+      .append("feGaussianBlur").attr("stdDeviation", "3.5").attr("result", "coloredBlur");
+    defs.append("filter").attr("id", "glow2")
+      .append("feGaussianBlur").attr("stdDeviation", "3.5").attr("result", "coloredBlur");
   
-    defs.append("filter")
-      .attr("id", "glow2")
-      .append("feGaussianBlur")
-      .attr("stdDeviation", "3.5")
-      .attr("result", "coloredBlur");
-  
-    // Tooltips
+    // Tooltip
     const tooltip = d3.select("body").append("div")
       .attr("class", "space-tooltip")
       .style("position", "absolute")
       .style("background", "#0f0f3a")
       .style("color", "#fff")
-      .style("border", "2px dashedrgb(183, 233, 255)")
+      .style("border", "2px dashed rgb(183, 233, 255)")
       .style("padding", "0.5rem 1rem")
       .style("border-radius", "10px")
       .style("font-size", "10px")
@@ -170,13 +172,17 @@ function drawComparisonGraph(c1, c2) {
         .on("mouseout", () => tooltip.style("opacity", 0));
     });
   
-
+    // Légende
     svg.append("circle").attr("cx", 0).attr("cy", -30).attr("r", 6).attr("fill", "#8a8aff");
-    svg.append("text").attr("x", 12).attr("y", -25).text(c1).style("fill", "#fff").style("font-size", "10px").style("font-family", "'Press Start 2P'");
+    svg.append("text").attr("x", 12).attr("y", -25).text(c1).style("fill", "#fff")
+      .style("font-size", "10px").style("font-family", "'Press Start 2P'");
   
     svg.append("circle").attr("cx", 120).attr("cy", -30).attr("r", 6).attr("fill", "#3f3f9c");
-    svg.append("text").attr("x", 132).attr("y", -25).text(c2).style("fill", "#fff").style("font-size", "10px").style("font-family", "'Press Start 2P'");
+    svg.append("text").attr("x", 132).attr("y", -25).text(c2).style("fill", "#fff")
+      .style("font-size", "10px").style("font-family", "'Press Start 2P'");
   }
+  
+  
   
   
   
