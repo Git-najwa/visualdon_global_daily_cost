@@ -3,14 +3,14 @@ import { drawCircularChart } from './circularChart.js';
 drawCircularChart(); // Appel du graphique radar
 
 const svg = d3.select("#map");
-svg.attr("width", 1200).attr("height", 600); // Taille personnalisée
+svg.attr("width", 1200).attr("height", 620); // Taille personnalisée
 
 const width = +svg.attr("width");
 const height = +svg.attr("height");
 
 const projection = d3.geoMercator()
   .scale(125)
-  .translate([width / 2, height / 1.45]);
+  .translate([width / 2.1, height / 1.5]);
 
 const path = d3.geoPath().projection(projection);
 
@@ -29,6 +29,7 @@ Promise.all([
 
   const countries = topojson.feature(worldData, worldData.objects.countries).features;
 
+  // Gestion clic sur un pays
   svg.selectAll("path")
     .data(countries)
     .join("path")
@@ -48,8 +49,24 @@ Promise.all([
       if (!selectedCountries.includes(name)) {
         d3.select(this).attr("fill", costData[name] ? "#3b82f6" : "#1111aa");
       }
+      d3.select("#tooltip").classed("hidden", true);
     })
+
+    .on("mousemove", function (event, d) {
+      const name = altNames[d.properties.name] || d.properties.name;
+      const cost = costData[name]?.cost ?? "Données indisponibles";
+    
+      const tooltip = d3.select("#tooltip");
+      tooltip
+        .style("left", (event.pageX + 15) + "px")
+        .style("top", (event.pageY - 20) + "px")
+        .html(`<strong>${name}</strong><br>Coût : ${cost}`)
+        .classed("hidden", false);
+    })
+
     .on("click", function (event, d) {
+      event.stopPropagation(); // Empêche le clic SVG de se déclencher
+
       const name = altNames[d.properties.name] || d.properties.name;
       if (!costData[name]) return;
 
@@ -64,23 +81,20 @@ Promise.all([
         }
       }
 
-      // Rocket visuelle (facultatif)
+      // Rocket visuelle
       const [x, y] = projection(d3.geoCentroid(d));
       const rocket = document.getElementById("rocket");
       if (rocket) {
-        rocket.style.left = `${x + 100}px`;
+        rocket.style.left = `${x}px`;
         rocket.style.top = `${y}px`;
       }
 
       // Affichage des infos
-      if (costData[name]) {
-        document.getElementById("country-name").textContent = name;
-        document.getElementById("daily-cost").textContent = `Coût moyen par jour : ${costData[name].cost}`;
-        document.getElementById("country-info").classList.remove("hidden");
-      } else {
-        document.getElementById("country-info").classList.add("hidden");
-      }
+      document.getElementById("country-name").textContent = name;
+      document.getElementById("daily-cost").textContent = `Coût moyen par jour : ${costData[name].cost}`;
+      document.getElementById("country-info").classList.remove("hidden");
 
+      // Masquer la journée simulée si visible
       document.getElementById("day-simulation").classList.add("hidden");
 
       // Redirection si 2 pays sélectionnés
@@ -89,4 +103,19 @@ Promise.all([
         window.location.href = `compare.html?country1=${encodeURIComponent(c1)}&country2=${encodeURIComponent(c2)}`;
       }
     });
+
+  // Gestion clic "en dehors des pays"
+  svg.on("click", function (event) {
+    if (event.target.tagName !== "path") {
+      selectedCountries = [];
+
+      svg.selectAll(".map-path")
+        .attr("fill", d => {
+          const name = altNames[d.properties.name] || d.properties.name;
+          return costData[name] ? "#3b82f6" : "#1111aa";
+        });
+
+      document.getElementById("country-info").classList.add("hidden");
+    }
+  });
 });

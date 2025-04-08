@@ -108,7 +108,7 @@ function drawComparisonGraph(c1, c2) {
     svg.append("path")
       .datum(costs1)
       .attr("fill", "none")
-      .attr("stroke", "#38bdf8")
+      .attr("stroke", "#8a8aff")
       .attr("stroke-width", 2.5)
       .attr("filter", "url(#glow1)")
       .attr("d", line);
@@ -116,7 +116,7 @@ function drawComparisonGraph(c1, c2) {
     svg.append("path")
       .datum(costs2)
       .attr("fill", "none")
-      .attr("stroke", "#f472b6")
+      .attr("stroke", "#3f3f9c")
       .attr("stroke-width", 2.5)
       .attr("filter", "url(#glow2)")
       .attr("d", line);
@@ -141,7 +141,7 @@ function drawComparisonGraph(c1, c2) {
       .style("position", "absolute")
       .style("background", "#0f0f3a")
       .style("color", "#fff")
-      .style("border", "2px dashed #38bdf8")
+      .style("border", "2px dashedrgb(183, 233, 255)")
       .style("padding", "0.5rem 1rem")
       .style("border-radius", "10px")
       .style("font-size", "10px")
@@ -157,7 +157,7 @@ function drawComparisonGraph(c1, c2) {
         .attr("cx", (d, i) => x(labels[i]))
         .attr("cy", d => y(d))
         .attr("r", 5)
-        .attr("fill", idx === 0 ? "#38bdf8" : "#f472b6")
+        .attr("fill", idx === 0 ? "#8a8aff" : "#3f3f9c")
         .attr("stroke", "#fff")
         .attr("stroke-width", 1.2)
         .on("mouseover", (event, d) => {
@@ -170,11 +170,11 @@ function drawComparisonGraph(c1, c2) {
         .on("mouseout", () => tooltip.style("opacity", 0));
     });
   
-    // Légende
-    svg.append("circle").attr("cx", 0).attr("cy", -30).attr("r", 6).attr("fill", "#38bdf8");
+
+    svg.append("circle").attr("cx", 0).attr("cy", -30).attr("r", 6).attr("fill", "#8a8aff");
     svg.append("text").attr("x", 12).attr("y", -25).text(c1).style("fill", "#fff").style("font-size", "10px").style("font-family", "'Press Start 2P'");
   
-    svg.append("circle").attr("cx", 120).attr("cy", -30).attr("r", 6).attr("fill", "#f472b6");
+    svg.append("circle").attr("cx", 120).attr("cy", -30).attr("r", 6).attr("fill", "#3f3f9c");
     svg.append("text").attr("x", 132).attr("y", -25).text(c2).style("fill", "#fff").style("font-size", "10px").style("font-family", "'Press Start 2P'");
   }
   

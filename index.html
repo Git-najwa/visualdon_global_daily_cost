@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Combien coûte un jour de vie ?</title>
- 
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -13,69 +12,70 @@
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <script src="https://unpkg.com/topojson@3"></script>
 
-  <!-- Styles personnalisés -->
+  <!-- Fonts + CSS -->
   <link rel="stylesheet" href="src/css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-black text-white font-['Press_Start_2P']">
+<body class="bg-black text-white font-['Press_Start_2P'] overflow-x-hidden">
 
   <div class="container mx-auto p-6 text-center">
 
-    <div id="map-container" class="bg-gray-800 p-4 rounded-lg shadow-md">
-      <br>
-      <h1 class="text-3xl font-bold mb-6">Combien coûte un jour de vie dans le monde ?</h1>
+    <h1 class="text-3xl font-bold mb-6">Combien coûte un jour de vie dans le monde ?</h1>
 <br>
-<div id="compare-hint" class="compare-hint">  
-  <span> Sélectionne <strong>2 pays</strong><br>pour comparer leurs journées !</span>
-</div>
-      
-
-      <svg id="map" width="800" height="400"></svg>
+    <div id="compare-hint" class="compare-hint mb-6">  
+      <span>Sélectionne <strong>2 pays</strong><br>pour comparer leurs journées !</span>
+    </div>
+<br> 
+<br>
+    <!-- Carte + Fusée -->
+    <div id="map-container" class="relative bg-[#0000007c] rounded-lg shadow-lg pb-10">
+      <div id="tooltip" class="hidden"></div>
+      <svg id="map" width="1400" height="700"></svg>
       <img src="/data/assets/rocket-pixel.webp" id="rocket" alt="rocket" />
-
-      <!-- Section soucoupe + bouton -->
-      <div class="flex flex-col items-center mt-16 space-y-8" id="spaceship-section">
-        <button id="toggleView" class="animated-button">
-          Voir les 3 pays les moins chers
-        </button>
-
-        <div id="cockpit-chart" class="mt-6"></div>
-
-        <!-- Détails des activités -->
-        <div id="activityDetails" class="mt-8"></div>
-      </div>
-
-      <div id="search-container" class="mt-16 mb-24 flex justify-center items-center">
-        <input type="text" id="country-search" placeholder="Rechercher un pays..." />
-      </div>
-      <div id="circular-barplot"></div>
-
-      <!-- Visualisation circulaire -->
-      <section id="circular-visual">
-        <div id="circular-barplot" class="my-16"></div>
-      </section> 
-
-      <!-- Son soucoupe -->
-      <audio id="soucoupe-audio" src="/data/assets/soucoupe.wav" preload="auto"></audio>
     </div>
 
-    <!-- Overlay pixel -->
-    <div class="pixel-overlay"></div>
-
-    <!-- Info boîte pays -->
-    <div id="country-info" class="info-box hidden">
+    <!-- Boîte info pays (désormais plus bas) -->
+    <div id="country-info" class="info-box hidden mt-12">
       <h2 id="country-name">Canada</h2>
       <p id="daily-cost">Coût moyen par jour : CA$75</p>
       <button onclick="startSimulation()">Voir une journée type</button>
     </div>
 
-    <!-- Simulation de la journée -->
+    <!-- Section soucoupe + bouton -->
+    <div class="flex flex-col items-center mt-16 space-y-8" id="spaceship-section">
+      <button id="toggleView" class="animated-button">
+        Voir les 3 pays les moins chers
+      </button>
+
+      <div id="cockpit-chart" class="mt-6"></div>
+
+      <!-- Détails des activités -->
+      <div id="activityDetails" class="mt-8"></div>
+    </div>
+
+    <!-- Barre de recherche -->
+    <div id="search-container" class="mt-16 mb-24 flex justify-center items-center">
+      <input type="text" id="country-search" placeholder="Rechercher un pays..." />
+    </div>
+
+    <!-- Visualisation circulaire -->
+    <section id="circular-visual">
+      <div id="circular-barplot" class="my-16"></div>
+    </section> 
+
+    <!-- Audio soucoupe -->
+    <audio id="soucoupe-audio" src="/data/assets/soucoupe.wav" preload="auto"></audio>
+
+    <!-- Simulation journée type -->
     <div id="day-simulation" class="mt-8 hidden">
       <h2 class="text-2xl font-bold">Déroulement de la journée</h2>
       <div id="timeline" class="mt-4"></div>
     </div>
   </div>
+
+  <!-- Overlay pixel -->
+  <div class="pixel-overlay"></div>
 
   <!-- Scripts -->
   <script type="module" src="src/js/map.js"></script>
