@@ -38,29 +38,42 @@ function buildTimeline(containerId, countryName) {
 }
 
 function drawComparisonGraph(c1, c2) {
-    const margin = { top: 40, right: 30, bottom: 90, left: 60 };
+    const margin = { top: 100, right: 30, bottom: 150, left: 60 };
     const width = 900 - margin.left - margin.right;
     const height = 400 - margin.top - margin.bottom;
+    const totalWidth = width + margin.left + margin.right;
+    const totalHeight = height + margin.top + margin.bottom;
   
-    const svg = d3.select("#comparison-graph")
+    // Création du SVG
+    const svgContainer = d3.select("#comparison-graph")
       .append("svg")
-      .attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.top + margin.bottom)
-      .append("g")
+      .attr("width", totalWidth)
+      .attr("height", totalHeight)
+      .style("background", "url('/data/assets/space-bg.gif') center center / cover no-repeat");
+  
+    // ✅ Ajout du <rect> centré
+    svgContainer.insert("rect", ":first-child")
+      .attr("x", 0)
+      .attr("y", 0)
+      .attr("width", totalWidth)
+      .attr("height", totalHeight)
+      .attr("fill", "rgba(10,10,30, 0.6)")
+      .attr("rx", 24);
+  
+    // Groupe principal avec marges
+    const svg = svgContainer.append("g")
       .attr("transform", `translate(${margin.left},${margin.top})`);
   
-    // 🔐 Fonction robuste pour extraire les coûts
-    function getCosts(country) {
-      return data[country].activities.map((a) => {
-        if (!a || typeof a !== "string") return 0;
-        const parts = a.split(":");
-        if (parts.length < 2) return 0;
-        const num = parseFloat(parts[1].replace("€", "").trim());
-        return isNaN(num) ? 0 : num;
-      });
-    }
+    const labels = data[c1].activities.map((_, i) => `${7 + i * 2}:00`);
   
-    const labels = data[c1].activities.map((a, i) => `${7 + i * 2}:00`);
+    const getCosts = (country) => data[country].activities.map((a) => {
+      if (!a || typeof a !== "string") return 0;
+      const parts = a.split(":");
+      if (parts.length < 2) return 0;
+      const num = parseFloat(parts[1].replace("€", "").trim());
+      return isNaN(num) ? 0 : num;
+    });
+  
     const costs1 = getCosts(c1);
     const costs2 = getCosts(c2);
   
@@ -69,49 +82,70 @@ function drawComparisonGraph(c1, c2) {
       .domain([0, d3.max([...costs1, ...costs2]) * 1.2])
       .range([height, 0]);
   
-    // 🧭 Axes
+    // Axes
     svg.append("g")
       .attr("transform", `translate(0, ${height})`)
       .call(d3.axisBottom(x))
       .selectAll("text")
-      .attr("transform", "rotate(-40)")
+      .attr("transform", "rotate(-35)")
       .style("text-anchor", "end")
-      .style("fill", "#fff")
-      .style("font-size", "10px");
+      .style("fill", "#ffffffcc")
+      .style("font-size", "10px")
+      .style("font-family", "'Press Start 2P', monospace");
   
     svg.append("g")
       .call(d3.axisLeft(y))
       .selectAll("text")
-      .style("fill", "#fff");
+      .style("fill", "#ffffffcc")
+      .style("font-family", "'Press Start 2P', monospace");
   
-    // 📈 Courbes
+    // Courbes néon
     const line = d3.line()
       .x((d, i) => x(labels[i]))
-      .y((d) => y(d))
+      .y(d => y(d))
       .curve(d3.curveMonotoneX);
   
     svg.append("path")
       .datum(costs1)
       .attr("fill", "none")
       .attr("stroke", "#38bdf8")
-      .attr("stroke-width", 3)
+      .attr("stroke-width", 2.5)
+      .attr("filter", "url(#glow1)")
       .attr("d", line);
   
     svg.append("path")
       .datum(costs2)
       .attr("fill", "none")
       .attr("stroke", "#f472b6")
-      .attr("stroke-width", 3)
+      .attr("stroke-width", 2.5)
+      .attr("filter", "url(#glow2)")
       .attr("d", line);
   
-    // 🪄 Tooltip
+    // Glow filters
+    const defs = svgContainer.append("defs");
+    defs.append("filter")
+      .attr("id", "glow1")
+      .append("feGaussianBlur")
+      .attr("stdDeviation", "3.5")
+      .attr("result", "coloredBlur");
+  
+    defs.append("filter")
+      .attr("id", "glow2")
+      .append("feGaussianBlur")
+      .attr("stdDeviation", "3.5")
+      .attr("result", "coloredBlur");
+  
+    // Tooltips
     const tooltip = d3.select("body").append("div")
+      .attr("class", "space-tooltip")
       .style("position", "absolute")
-      .style("padding", "6px 12px")
-      .style("background", "#000")
+      .style("background", "#0f0f3a")
       .style("color", "#fff")
-      .style("border-radius", "8px")
-      .style("font-size", "11px")
+      .style("border", "2px dashed #38bdf8")
+      .style("padding", "0.5rem 1rem")
+      .style("border-radius", "10px")
+      .style("font-size", "10px")
+      .style("pointer-events", "none")
       .style("opacity", 0);
   
     [costs1, costs2].forEach((costArray, idx) => {
@@ -124,22 +158,26 @@ function drawComparisonGraph(c1, c2) {
         .attr("cy", d => y(d))
         .attr("r", 5)
         .attr("fill", idx === 0 ? "#38bdf8" : "#f472b6")
+        .attr("stroke", "#fff")
+        .attr("stroke-width", 1.2)
         .on("mouseover", (event, d) => {
           tooltip
-            .html(`${idx === 0 ? c1 : c2} : ${d.toFixed(2)}€`)
-            .style("left", event.pageX + 10 + "px")
-            .style("top", event.pageY - 20 + "px")
+            .html(`<strong>${idx === 0 ? c1 : c2}</strong><br>${d.toFixed(2)} €`)
+            .style("left", event.pageX + 12 + "px")
+            .style("top", event.pageY - 24 + "px")
             .style("opacity", 1);
         })
         .on("mouseout", () => tooltip.style("opacity", 0));
     });
   
-    // 🧾 Légendes
-    svg.append("circle").attr("cx", 0).attr("cy", -20).attr("r", 6).attr("fill", "#38bdf8");
-    svg.append("text").attr("x", 12).attr("y", -15).text(c1).style("fill", "#fff").style("font-size", "11px");
+    // Légende
+    svg.append("circle").attr("cx", 0).attr("cy", -30).attr("r", 6).attr("fill", "#38bdf8");
+    svg.append("text").attr("x", 12).attr("y", -25).text(c1).style("fill", "#fff").style("font-size", "10px").style("font-family", "'Press Start 2P'");
   
-    svg.append("circle").attr("cx", 100).attr("cy", -20).attr("r", 6).attr("fill", "#f472b6");
-    svg.append("text").attr("x", 112).attr("y", -15).text(c2).style("fill", "#fff").style("font-size", "11px");
+    svg.append("circle").attr("cx", 120).attr("cy", -30).attr("r", 6).attr("fill", "#f472b6");
+    svg.append("text").attr("x", 132).attr("y", -25).text(c2).style("fill", "#fff").style("font-size", "10px").style("font-family", "'Press Start 2P'");
   }
+  
+  
   
   
