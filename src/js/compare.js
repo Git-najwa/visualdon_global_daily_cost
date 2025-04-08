@@ -38,12 +38,37 @@ function buildTimeline(containerId, countryName) {
         <div class="time">${hour}:00</div>
         ${activity ? `<div class="bubble">${activity}</div>` : ""}
       `;
+
+      block.addEventListener("click", () => {
+        openFullscreenPopup(label.trim(), cost.trim(), `/data/assets/${scenes[index]}`);
+      });
   
       container.appendChild(block);
     });
   }
+  function openFullscreenPopup(label, cost, imageUrl) {
+    const popup = document.createElement("div");
+    popup.className = "fullscreen-popup";
+    popup.innerHTML = `
+      <div class="popup-content">
+        <span class="close-btn">✖</span>
+        <br>
+        <br>
+        <img src="${imageUrl}" alt="${label}" />
+        <h3>${label}</h3>
+        <p>${cost}</p>
+      </div>
+    `;
   
-function drawComparisonGraph(c1, c2) {
+    document.body.appendChild(popup);
+  
+    // Fermer au clic
+    popup.querySelector(".close-btn").addEventListener("click", () => {
+      popup.remove();
+    });
+  }
+  
+  function drawComparisonGraph(c1, c2) {
     const margin = { top: 100, right: 30, bottom: 150, left: 60 };
     const width = 960 - margin.left - margin.right;
     const height = 400 - margin.top - margin.bottom;
@@ -51,10 +76,11 @@ function drawComparisonGraph(c1, c2) {
     const totalHeight = height + margin.top + margin.bottom;
   
     const svgContainer = d3.select("#comparison-graph")
+      .html("") // clear before redraw
       .append("svg")
       .attr("width", totalWidth)
       .attr("height", totalHeight)
-      .style("background", "url('/data/assets/space-bg.gif') center center / cover no-repeat");
+      .style("background", "url('/data/assets/starfield.gif') center center / cover no-repeat");
   
     svgContainer.insert("rect", ":first-child")
       .attr("x", 0)
@@ -67,19 +93,29 @@ function drawComparisonGraph(c1, c2) {
     const svg = svgContainer.append("g")
       .attr("transform", `translate(${margin.left},${margin.top})`);
   
-    // 🔍 Étape 1 : parser une fois les labels valides
-    const activities = data[c1].activities
-      .map((a) => {
-        if (!a || typeof a !== "string") return null;
-        const parts = a.split(":");
-        if (parts.length < 2) return null;
+    // --- Secure mapping of activity labels and costs ---
+    const parseCountry = (country) =>
+      (data[country]?.activities || []).map(a => {
+        const parts = a?.split(":");
+        if (!parts || parts.length < 2) return null;
         return {
           label: parts[0].trim(),
-          cost1: parseFloat(parts[1].replace("€", "").trim()),
-          cost2: parseFloat((data[c2].activities || [])[data[c1].activities.indexOf(a)]?.split(":")[1]?.replace("€", "").trim()) || 0
+          cost: parseFloat(parts[1].replace("€", "").trim())
         };
-      })
-      .filter(d => d && d.label && !isNaN(d.cost1) && !isNaN(d.cost2));
+      }).filter(d => d && d.label && !isNaN(d.cost));
+  
+    const map1 = parseCountry(c1);
+    const map2 = parseCountry(c2);
+  
+    const sharedLabels = map1.map(d => d.label).filter(label =>
+      map2.find(d => d.label === label)
+    );
+  
+    const activities = sharedLabels.map(label => ({
+      label,
+      cost1: map1.find(d => d.label === label).cost,
+      cost2: map2.find(d => d.label === label).cost,
+    }));
   
     const labels = activities.map(d => d.label);
     const costs1 = activities.map(d => d.cost1);
@@ -90,7 +126,6 @@ function drawComparisonGraph(c1, c2) {
       .domain([0, d3.max([...costs1, ...costs2]) * 1.2])
       .range([height, 0]);
   
-    // Axes
     svg.append("g")
       .attr("transform", `translate(0, ${height})`)
       .call(d3.axisBottom(x))
@@ -108,7 +143,6 @@ function drawComparisonGraph(c1, c2) {
       .style("fill", "#ffffffcc")
       .style("font-family", "'Press Start 2P', monospace");
   
-    // Courbes
     const line = d3.line()
       .x((d, i) => x(labels[i]))
       .y(d => y(d))
@@ -130,14 +164,12 @@ function drawComparisonGraph(c1, c2) {
       .attr("filter", "url(#glow2)")
       .attr("d", line);
   
-    // Filtres
     const defs = svgContainer.append("defs");
     defs.append("filter").attr("id", "glow1")
       .append("feGaussianBlur").attr("stdDeviation", "3.5").attr("result", "coloredBlur");
     defs.append("filter").attr("id", "glow2")
       .append("feGaussianBlur").attr("stdDeviation", "3.5").attr("result", "coloredBlur");
   
-    // Tooltip
     const tooltip = d3.select("body").append("div")
       .attr("class", "space-tooltip")
       .style("position", "absolute")
@@ -172,15 +204,16 @@ function drawComparisonGraph(c1, c2) {
         .on("mouseout", () => tooltip.style("opacity", 0));
     });
   
-    // Légende
-    svg.append("circle").attr("cx", 0).attr("cy", -30).attr("r", 6).attr("fill", "#8a8aff");
-    svg.append("text").attr("x", 12).attr("y", -25).text(c1).style("fill", "#fff")
-      .style("font-size", "10px").style("font-family", "'Press Start 2P'");
+    // Légende espacée à gauche et droite
+    svg.append("circle").attr("cx", 20).attr("cy", -40).attr("r", 6).attr("fill", "#8a8aff");
+    svg.append("text").attr("x", 32).attr("y", -35).text(c1)
+      .style("fill", "#fff").style("font-size", "10px").style("font-family", "'Press Start 2P'");
   
-    svg.append("circle").attr("cx", 120).attr("cy", -30).attr("r", 6).attr("fill", "#3f3f9c");
-    svg.append("text").attr("x", 132).attr("y", -25).text(c2).style("fill", "#fff")
-      .style("font-size", "10px").style("font-family", "'Press Start 2P'");
+    svg.append("circle").attr("cx", width - 120).attr("cy", -40).attr("r", 6).attr("fill", "#3f3f9c");
+    svg.append("text").attr("x", width - 108).attr("y", -35).text(c2)
+      .style("fill", "#fff").style("font-size", "10px").style("font-family", "'Press Start 2P'");
   }
+  
   
   
   
