@@ -181,8 +181,11 @@ body {
   }
   
   .popup-content.graph-popup {
-    background-image: url('/data/assets/starfield.gif');
-    background-size: cover;
+    background: radial-gradient(circle at center, #0d0d30 40%, #000 100%);
+    background-size: contain; /* 🔄 plus propre que cover ici */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-blend-mode: screen;
     background-position: center;
     border-radius: 40px;
     box-shadow: 0 0 50px #ff9ff3aa, 0 0 20px #f315fa66 inset, 0 0 40px #38bdf8aa inset;
