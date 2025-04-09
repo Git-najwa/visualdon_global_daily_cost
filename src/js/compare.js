@@ -84,7 +84,6 @@ function drawComparisonGraph(c1, c2, containerSelector = "#comparison-graph", wi
       .style("display", "block")
       .style("width", "100%")
       .style("height", "100%")
-      .style("background", "url('/data/assets/starfield.gif') center / cover no-repeat")
       .on("click", () => {
         if (containerSelector === "#comparison-graph") showFullscreenGraph(c1, c2);
       });
@@ -192,8 +191,8 @@ function drawComparisonGraph(c1, c2, containerSelector = "#comparison-graph", wi
             .style("pointer-events", "auto")
             .style("z-index", "9999")
             .html(`
-              <div class="tooltip-title">🌍 Activité : ${labels[i]}</div>
-              <div class="tooltip-cost" style="margin-top: 0.8rem;">💰 Coût : ${d}€</div>
+              <div class="tooltip-title"> Activité : ${labels[i]}</div>
+              <div class="tooltip-cost" style="margin-top: 0.8rem;"> Coût : ${d}€</div>
             `);
   
           tooltip.style("left", (event.pageX + 10) + "px")
@@ -212,10 +211,12 @@ function drawComparisonGraph(c1, c2, containerSelector = "#comparison-graph", wi
     const popup = document.createElement("div");
     popup.className = "fullscreen-popup";
     popup.innerHTML = `
-      <div class="popup-content graph-popup">
-        <span class="close-btn">✖</span>
-        <div id="fullscreen-graph"></div>
-      </div>
+     <div class="popup-content graph-popup">
+    <span class="close-btn">✖</span>
+    <div class="graph-wrapper">
+      <div id="fullscreen-graph"></div>
+    </div>
+  </div>
     `;
     document.body.appendChild(popup);
     popup.querySelector(".close-btn").addEventListener("click", () => popup.remove());

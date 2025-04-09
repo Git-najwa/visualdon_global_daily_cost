@@ -107,6 +107,8 @@ body {
     position: relative;
     width: 100%;
     max-width: 960px;
+    background-repeat: no-repeat;
+    background-size: contain; /* change 'cover' en 'contain' */
     aspect-ratio: 900 / 512;
     margin: 0 auto;
     background-image: url('/data/assets/starfield.gif');
@@ -303,5 +305,20 @@ body {
     margin-bottom: 1.5rem;
     image-rendering: pixelated;
     box-shadow: 0 0 10px #6e7aff;
+  }
+  
+  .graph-wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    background-image: url('/data/assets/starfield.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
