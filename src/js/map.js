@@ -95,12 +95,19 @@ Promise.all([
     .on("mousemove", function (event, d) {
       const name = altNames[d.properties.name] || d.properties.name;
       const cost = costData[name]?.cost ?? "Données indisponibles";
-      d3.select("#tooltip")
-        .style("left", (event.pageX + 15) + "px")
-        .style("top", (event.pageY - 20) + "px")
-        .html(`<strong>${name}</strong><br>Coût : ${cost}`)
+    
+      const tooltip = d3.select("#tooltip");
+    
+      tooltip
+        .style("left", `${event.pageX + 15}px`)
+        .style("top", `${event.pageY - 40}px`)
+        .html(`
+          <div class="tooltip-title">${name}</div>
+          <div class="tooltip-cost"> ${cost} / jour</div>
+        `)
         .classed("hidden", false);
     })
+    
     .on("click", function (event, d) {
       event.stopPropagation();
 

@@ -449,4 +449,51 @@ svg {
   border-color: #38bdf8;
   box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
 }
+#tooltip {
+  position: absolute;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(145deg, #0a0a2a, #13134a);
+  border: 2px dashed #0ff;
+  border-radius: 12px;
+  color: #ffffff;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 9px;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 999;
+  box-shadow: 0 0 10px #0ff3, 0 0 20px #38bdf8aa;
+  animation: float-tooltip 3s ease-in-out infinite;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  backdrop-filter: blur(3px);
+}
 
+#tooltip.hidden {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.tooltip-title {
+  font-size: 10px;
+  color: #38bdf8;
+  text-shadow: 0 0 5px #38bdf8;
+  margin-bottom: 4px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tooltip-cost {
+  color: #facc15;
+  font-size: 9px;
+  text-shadow: 0 0 3px #facc15;
+  display: block;
+}
+
+@keyframes float-tooltip {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
