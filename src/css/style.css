@@ -312,8 +312,8 @@ path.dimmed {
 }
 
 .character-option.selected {
-  border-color: #facc15;
-  box-shadow: 0 0 12px #facc15, 0 0 20px #facc15aa;
+  border-color: #fa15d8;
+  box-shadow: 0 0 12px #fa15aa, 0 0 20px #fa15dbaa;
 }
 
 .rocket-avatar {

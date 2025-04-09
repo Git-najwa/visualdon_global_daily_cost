@@ -18,34 +18,47 @@ let selectedCharacter = null;
 const characterImg = document.getElementById("character");
 const rocket = document.getElementById("rocket");
 
-// ✅ Associe les bons fichiers avatar
+// ✅ Map des avatars
 const characterMap = {
   patrick: "avatar1.png",
   amongus: "avatar2.png",
   keroppi: "avatar3.webp"
 };
 
-// ✅ Choix de personnage
+// ✅ Choix du personnage
 document.querySelectorAll(".character-option").forEach(option => {
   option.addEventListener("click", () => {
     document.querySelectorAll(".character-option").forEach(opt => opt.classList.remove("selected"));
     option.classList.add("selected");
 
-    selectedCharacter = option.dataset.character;
-    characterImg.src = `/data/assets/${characterMap[selectedCharacter]}`;
+    const avatar = option.dataset.character;
+    selectedCharacter = avatar;
+
+    characterImg.src = `/data/assets/${characterMap[avatar]}`;
     characterImg.classList.remove("hidden");
-// Positionner l'avatar directement au centre de la fusée
-const rocketRect = rocket.getBoundingClientRect();
-const mapRect = document.getElementById("map-container").getBoundingClientRect();
-const offsetLeft = rocketRect.left - mapRect.left;
-const offsetTop = rocketRect.top - mapRect.top;
 
-const avatarSize = 50; // à adapter selon ton image
-characterImg.style.left = `${offsetLeft + rocketRect.width / 2 - avatarSize / 2}px`;
-characterImg.style.top = `${offsetTop + rocketRect.height / 2 - avatarSize / 2}px`;
-
+    // ✅ Attendre que l’image de l’avatar soit chargée AVANT de le positionner
+    characterImg.onload = () => {
+      positionAvatarInRocket();
+    };
   });
 });
+
+// ✅ Fonction qui place l’avatar au centre de la fusée
+function positionAvatarInRocket() {
+  const rocketRect = rocket.getBoundingClientRect();
+  const mapRect = document.getElementById("map-container").getBoundingClientRect();
+
+  const avatarSize = characterImg.offsetWidth || 50; // fallback
+  const offsetLeft = rocketRect.left - mapRect.left;
+  const offsetTop = rocketRect.top - mapRect.top;
+
+  characterImg.style.left = `${offsetLeft + rocketRect.width / 2 - avatarSize / 2}px`;
+  characterImg.style.top = `${offsetTop + rocketRect.height / 2 - avatarSize / 2}px`;
+  characterImg.style.position = "absolute";
+  characterImg.style.transition = "all 0.4s ease";
+}
+
 
 Promise.all([
   d3.json("https://unpkg.com/world-atlas@2/countries-110m.json"),
