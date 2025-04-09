@@ -22,56 +22,69 @@
   <div class="container mx-auto p-6 text-center">
 
     <h1 class="text-3xl font-bold mb-6">Combien coûte un jour de vie dans le monde ?</h1>
-<br>
+
     <div id="compare-hint" class="compare-hint mb-6">  
       <span>Sélectionne <strong>2 pays</strong><br>pour comparer leurs journées !</span>
     </div>
-<br> 
-<br>
 
-<div id="map-container">
-  <svg id="map" width="1400" height="700"></svg>
-  <img src="/data/assets/rocket-pixel.webp" id="rocket" alt="rocket" />
+     <!-- === Sélection de personnage === -->
+     <div class="character-selector mt-6">
+      <div class="character-option" data-character="patrick">
+        <img src="/data/assets/avatar1.png" alt="Patrick" />
+      </div>
+      <div class="character-option" data-character="amongus">
+        <img src="/data/assets/avatar2.png" alt="Among Us" />
+      </div>
+      <div class="character-option" data-character="keroppi">
+        <img src="/data/assets/avatar3.webp" alt="Keroppi" />
+      </div>
+    </div>
+    <br>
+    <br>
+    <!-- === Carte interactive === -->
+    <div id="map-container">
+      <svg id="map" width="1400" height="700"></svg>
 
-  <div id="country-info" class="info-box hidden">
-    <h2 id="country-name">Canada</h2>
-    <p id="daily-cost">Coût moyen par jour : 22€</p>
-    <button onclick="startSimulation()">VOIR UNE JOURNÉE TYPE</button>
-  </div>
-</div>
+      <!-- Fusée -->
+      <img src="/data/assets/rocket-pixel.webp" id="rocket" alt="rocket" />
 
-    <!-- Section soucoupe + bouton -->
+      <!-- Avatar dynamique dans la fusée -->
+      <img id="character" class="hidden" src="" alt="avatar" />
+
+      <!-- Boîte d'infos pays -->
+      <div id="country-info" class="info-box hidden">
+        <h2 id="country-name">Canada</h2>
+        <p id="daily-cost">Coût moyen par jour : 22€</p>
+        <button onclick="startSimulation()">VOIR UNE JOURNÉE TYPE</button>
+      </div>
+    </div>
+
+
+    <!-- === Section cockpit (radar chart) === -->
     <div class="flex flex-col items-center mt-16 space-y-8" id="spaceship-section">
-      <button id="toggleView" class="animated-button">
-        Voir les 3 pays les moins chers
-      </button>
-
-
-
+      <button id="toggleView" class="animated-button">Voir les 3 pays les moins chers</button>
       <div id="cockpit-chart" class="mt-6"></div>
-
-      <!-- Détails des activités -->
       <div id="activityDetails" class="mt-8"></div>
     </div>
 
-    <!-- Barre de recherche -->
+    <!-- === Recherche de pays === -->
     <div id="search-container" class="mt-16 mb-24 flex justify-center items-center">
       <input type="text" id="country-search" placeholder="Rechercher un pays..." />
     </div>
 
-    <!-- Visualisation circulaire -->
+    <!-- === Graphe circulaire === -->
     <section id="circular-visual">
       <div id="circular-barplot" class="my-16"></div>
-    </section> 
+    </section>
 
-    <!-- Audio soucoupe -->
-    <audio id="soucoupe-audio" src="/data/assets/soucoupe.wav" preload="auto"></audio>
-
-    <!-- Simulation journée type -->
+    <!-- === Simulation d'une journée type === -->
     <div id="day-simulation" class="mt-8 hidden">
       <h2 class="text-2xl font-bold">Déroulement de la journée</h2>
       <div id="timeline" class="mt-4"></div>
     </div>
+
+    <!-- Audio soucoupe -->
+    <audio id="soucoupe-audio" src="/data/assets/soucoupe.wav" preload="auto"></audio>
   </div>
 
   <!-- Overlay pixel -->
