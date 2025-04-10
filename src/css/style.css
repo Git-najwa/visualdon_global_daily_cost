@@ -412,7 +412,7 @@ svg {
 }
 
 #activityDetails ul li::before {
-  content: '▸';
+  content: '*';
   position: absolute;
   left: -12px;
   color: #facc15;
