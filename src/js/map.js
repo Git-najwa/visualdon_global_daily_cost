@@ -20,9 +20,9 @@ const rocket = document.getElementById("rocket");
 
 // ✅ Map des avatars
 const characterMap = {
-  patrick: "avatar1.png",
-  amongus: "avatar2.png",
-  keroppi: "avatar3.webp"
+  1: "avatar1.gif",
+  2: "avatar2.png",
+  3: "avatar3.webp"
 };
 
 // ✅ Choix du personnage
