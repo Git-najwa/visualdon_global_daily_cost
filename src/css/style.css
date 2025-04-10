@@ -492,7 +492,7 @@ svg {
 
 .intro-context {
   max-width: 1050px;
-  margin: 2rem auto 2rem;
+  margin: 2rem auto 5rem;
   padding: 1.5rem 2rem;
   background: rgba(10, 10, 40, 0.65);
   border: 2px dashed #38bdf8;
@@ -526,4 +526,12 @@ svg {
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
+}
+
+.character-selector h2 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: fadeInBox 0.6s ease-out;
 }
