@@ -133,6 +133,6 @@ document.getElementById("toggleView").addEventListener("click", () => {
   const btn = document.getElementById("toggleView");
   btn.classList.toggle("low", showingLow);
   btn.innerText = showingLow
-    ? "Voir les 3 pays les plus chers"
-    : "Voir les 3 pays les moins chers";
+    ? "Les 3 pays les moins chers"
+    : "Les 3 pays les plus chers";
 });
