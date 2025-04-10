@@ -150,7 +150,7 @@ function drawComparisonGraph(c1, c2, containerSelector = "#comparison-graph", wi
       svg.append("path")
         .datum(costArray)
         .attr("d", line)
-        .attr("stroke", idx === 0 ? "#8a8aff" : "#3f3f9c")
+        .attr("stroke", idx === 0 ? "#8a8aff" : "#ec4899")
         .attr("stroke-width", 2.5)
         .attr("fill", "none")
         .attr("stroke-dasharray", function() {
@@ -174,7 +174,7 @@ function drawComparisonGraph(c1, c2, containerSelector = "#comparison-graph", wi
         .attr("cx", (d, i) => x(labels[i]))
         .attr("cy", d => y(d))
         .attr("r", 5)
-        .attr("fill", idx === 0 ? "#8a8aff" : "#3f3f9c")
+        .attr("fill", idx === 0 ? "#8a8aff" : "#ec4899")
         .attr("stroke", "#fff")
         .attr("stroke-width", 1.2)
         .on("mouseover", function (event, d) {
@@ -203,7 +203,7 @@ function drawComparisonGraph(c1, c2, containerSelector = "#comparison-graph", wi
   
     svg.append("circle").attr("cx", 20).attr("cy", -40).attr("r", 6).attr("fill", "#8a8aff");
     svg.append("text").attr("x", 32).attr("y", -35).text(c1).style("fill", "#fff").style("font-size", "10px");
-    svg.append("circle").attr("cx", width - 120).attr("cy", -40).attr("r", 6).attr("fill", "#3f3f9c");
+    svg.append("circle").attr("cx", width - 120).attr("cy", -40).attr("r", 6).attr("fill", "#ec4899");
     svg.append("text").attr("x", width - 108).attr("y", -35).text(c2).style("fill", "#fff").style("font-size", "10px");
   }
   
