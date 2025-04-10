@@ -119,7 +119,7 @@ function drawComparisonGraph(c1, c2, containerSelector = "#comparison-graph", wi
     const costs1 = activities.map(d => d.cost1);
     const costs2 = activities.map(d => d.cost2);
   
-    const x = d3.scalePoint().domain(labels).range([0, width]).padding(0.5);
+    const x = d3.scalePoint().domain(labels).range([0, width]).padding(1);
     const y = d3.scaleLinear()
       .domain([0, Math.ceil(d3.max([...costs1, ...costs2]) / 5) * 5])
       .range([height, 0]);
@@ -161,7 +161,7 @@ function drawComparisonGraph(c1, c2, containerSelector = "#comparison-graph", wi
           return this.getTotalLength();
         })
         .transition()
-        .duration(4000)
+        .duration(5000)
         .ease(d3.easeCubicInOut)
         .attr("stroke-dashoffset", 0);
     });
@@ -220,5 +220,5 @@ function drawComparisonGraph(c1, c2, containerSelector = "#comparison-graph", wi
     `;
     document.body.appendChild(popup);
     popup.querySelector(".close-btn").addEventListener("click", () => popup.remove());
-    drawComparisonGraph(c1, c2, "#fullscreen-graph", 1600);
+    drawComparisonGraph(c1, c2, "#fullscreen-graph", 1150);
   }
