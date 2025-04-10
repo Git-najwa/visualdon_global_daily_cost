@@ -17,6 +17,7 @@ body {
 #map-container {
   position: relative;
   background: #0000007c;
+  border-radius: 20px;
   height: 700px;
 }
 
