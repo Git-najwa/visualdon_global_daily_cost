@@ -142,10 +142,10 @@ Promise.all([
         const [c1, c2] = selectedCountries;
 
         infoBox.innerHTML = `
-          <h2 class="text-xl mb-4 text-pink-400">Comparaison intergalactique</h2>
+          <h2 class="text-xl mb-4 text-pink-400">Comparaison</h2>
           <p class="mb-4">Tu as sélectionné <span class="text-yellow-300">${c1}</span> et <span class="text-yellow-300">${c2}</span>.</p>
           <p class="mb-4">Souhaites-tu les comparer ?</p>
-          <button id="confirm-compare" class="animated-button low mt-2">Comparer ces 2 pays</button>
+          <button id="confirm-compare" onclick="compareSelectedCountries()">VOIR LA COMPARAISON</button>
         `;
 
         setTimeout(() => {
