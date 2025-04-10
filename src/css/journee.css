@@ -422,6 +422,13 @@ body::-webkit-scrollbar,
 }
 
 
+.no-margin-bottom {
+  margin-bottom: -20px;
+  margin-left: -20px;
+  display: block;
+  image-rendering: pixelated; 
+  vertical-align: bottom;/* Optionnel : pour éviter l'espace en bas si l'image est inline */
+}
 
 
 
