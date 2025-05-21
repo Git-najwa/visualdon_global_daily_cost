@@ -378,16 +378,16 @@
     ]
   },
   "Canada": {
-    "cost": "22€",
+    "cost": "70€",
     "activities": [
       null,
-      "Eau et électricité: 1.6€",
-      "Petit-déjeuner: 1.8€",
-      "Transport: 1.6€",
-      "Courses: 4.5€",
-      "Souper: 4.0€",
-      "Activité: 3.4€",
-      "Loyer: 5.6€",
+      "Eau et électricité: 5.1€",
+      "Petit-déjeuner: 5.7€",
+      "Transport: 5.1€",
+      "Courses: 14.3€",
+      "Souper: 12.7€",
+      "Activité: 10.8€",
+      "Loyer: 17.8€",
       null
     ]
   },
@@ -573,17 +573,17 @@
       null
     ]
   },
-  "Denmark": {
-    "cost": "29€",
+ "Denmark": {
+    "cost": "88€",
     "activities": [
       null,
-      "Eau et électricité: 2.0€",
-      "Petit-déjeuner: 2.3€",
-      "Transport: 2.0€",
-      "Courses: 5.9€",
-      "Souper: 5.3€",
-      "Activité: 4.4€",
-      "Loyer: 7.3€",
+      "Eau et électricité: 6.1€",
+      "Petit-déjeuner: 7.0€",
+      "Transport: 6.1€",
+      "Courses: 17.9€",
+      "Souper: 16.1€",
+      "Activité: 13.4€",
+      "Loyer: 22.2€",
       null
     ]
   },
@@ -994,16 +994,16 @@
     ]
   },
   "India": {
-    "cost": "78€",
+    "cost": "15€",
     "activities": [
       null,
-      "Eau et électricité: 5.4€",
-      "Petit-déjeuner: 6.2€",
-      "Transport: 5.4€",
-      "Courses: 15.5€",
-      "Souper: 14.0€",
-      "Activité: 11.7€",
-      "Loyer: 19.4€",
+      "Eau et électricité: 1.0€",
+      "Petit-déjeuner: 1.2€",
+      "Transport: 1.0€",
+      "Courses: 3.0€",
+      "Souper: 2.7€",
+      "Activité: 2.2€",
+      "Loyer: 3.7€",
       null
     ]
   },
@@ -1106,16 +1106,16 @@
     ]
   },
   "Japan": {
-    "cost": "38€",
+    "cost": "63€",
     "activities": [
       null,
-      "Eau et électricité: 2.6€",
-      "Petit-déjeuner: 3.0€",
-      "Transport: 2.6€",
-      "Courses: 7.5€",
-      "Souper: 6.8€",
-      "Activité: 5.6€",
-      "Loyer: 9.4€",
+      "Eau et électricité: 4.3€",
+      "Petit-déjeuner: 5.0€",
+      "Transport: 4.3€",
+      "Courses: 12.4€",
+      "Souper: 11.3€",
+      "Activité: 9.3€",
+      "Loyer: 15.6€",
       null
     ]
   },
@@ -1399,17 +1399,17 @@
       null
     ]
   },
-  "Mexico": {
-    "cost": "70€",
+"Mexico": {
+    "cost": "49€",
     "activities": [
       null,
-      "Eau et électricité: 4.9€",
-      "Petit-déjeuner: 5.6€",
-      "Transport: 4.9€",
-      "Courses: 14.0€",
-      "Souper: 12.6€",
-      "Activité: 10.5€",
-      "Loyer: 17.5€",
+      "Eau et électricité: 3.4€",
+      "Petit-déjeuner: 3.9€",
+      "Transport: 3.4€",
+      "Courses: 9.8€",
+      "Souper: 8.8€",
+      "Activité: 7.3€",
+      "Loyer: 12.2€",
       null
     ]
   },
@@ -2016,16 +2016,16 @@
     ]
   },
   "South Korea": {
-    "cost": "18€",
+    "cost": "50€",
     "activities": [
       null,
-      "Eau et électricité: 1.3€",
-      "Petit-déjeuner: 1.4€",
-      "Transport: 1.3€",
-      "Courses: 3.6€",
-      "Souper: 3.3€",
-      "Activité: 2.7€",
-      "Loyer: 4.5€",
+      "Eau et électricité: 3.6€",
+      "Petit-déjeuner: 3.9€",
+      "Transport: 3.6€",
+      "Courses: 10.0€",
+      "Souper: 9.2€",
+      "Activité: 7.5€",
+      "Loyer: 12.5€",
       null
     ]
   },
@@ -2100,16 +2100,16 @@
     ]
   },
   "Switzerland": {
-    "cost": "81€",
+    "cost": "116€",
     "activities": [
       null,
-      "Eau et électricité: 5.7€",
-      "Petit-déjeuner: 6.5€",
-      "Transport: 5.7€",
-      "Courses: 16.3€",
-      "Souper: 14.6€",
-      "Activité: 12.2€",
-      "Loyer: 20.3€",
+      "Eau et électricité: 8.2€",
+      "Petit-déjeuner: 9.3€",
+      "Transport: 8.2€",
+      "Courses: 23.3€",
+      "Souper: 20.9€",
+      "Activité: 17.5€",
+      "Loyer: 29.1€",
       null
     ]
   },

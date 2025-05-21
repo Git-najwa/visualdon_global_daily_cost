@@ -183,4 +183,33 @@ Promise.all([
       `;
     }
   });
+
+  function showInitialInstructions() {
+    const instructions = d3.select("#map-container")
+      .append("div")
+      .attr("class", "map-instructions")
+      .style("position", "absolute")
+      .style("top", "10px")
+      .style("left", "50%")
+      .style("transform", "translateX(-50%)")
+      .style("text-align", "center")
+      .style("background", "rgba(0,0,0,0.8)")
+      .style("padding", "10px")
+      .style("border-radius", "8px")
+      .style("border", "2px solid #38bdf8")
+      .style("pointer-events", "none");
+
+    instructions.html(`
+      <p>🌟 Cliquez sur un pays pour découvrir une journée type</p>
+      <p>✨ Ou sélectionnez deux pays pour les comparer !</p>
+    `);
+
+    // Faire disparaître les instructions après la première interaction
+    d3.selectAll(".map-path").on("click.instructions", function() {
+      instructions.remove();
+      d3.selectAll(".map-path").on("click.instructions", null);
+    });
+  }
+
+  showInitialInstructions();
 });
