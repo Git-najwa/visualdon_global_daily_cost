@@ -13,27 +13,31 @@ Ces données sont collectées et agrégées par des institutions, chercheurs et 
 
 
 
-## **🗂️ Format et Structure des Données**  
-Les données sont fournies sous différents formats :  
+## **🗂️ Format et Structure des Données**
 
-- **CSV (Comma-Separated Values)** : Format tabulaire standard facile à manipuler.  
-- **JSON (JavaScript Object Notation)** : Format adapté aux applications web interactives.  
+Les données sont fournies au format **JSON**, structuré par pays. Chaque pays contient :
 
-📌 **Exemples de principaux attributs du dataset** :  
+* **`cost`** : coût moyen d’une journée de vie (ex. : `"72€"`)
+* **`activities`** : liste des postes de dépenses journalières (eau, repas, transport, etc.)
 
-| Attribut          | Description | Type |
-|------------------|-------------|-------|
-| **pays** | Nom du pays | Texte |
-| **indice_cout_vie** | Indice du coût de la vie (base 100 = New York) | Numérique |
-| **salaire_moyen** | Salaire moyen mensuel net (en USD) | Numérique |
-| **cout_journee** | Coût estimé d'une journée de vie (logement, nourriture, transport) | Numérique |
-| **loyer_index** | Indice des loyers par rapport à New York | Numérique |
-| **alimentation_index** | Indice des courses alimentaires | Numérique |
-| **transport_index** | Indice des transports | Numérique |
-| **devise** | Devise locale | Texte |
-| **date_maj** | Date de mise à jour des données | Date |
+📌 **Exemple de structure :**
 
-Ces données permettent de comparer efficacement les coûts de la vie entre pays et d'offrir une visualisation interactive des différences économiques globales.  
+```json
+"Canada": {
+  "cost": "72€",
+  "activities": [
+    "Eau et électricité: 2.3€",
+    "Petit-déjeuner: 2.2€",
+    "Transport: 1.6€",
+    "Courses: 5.8€",
+    "Souper: 4.8€",
+    "Activité: 4€",
+    "Loyer: 5.3€"
+  ]
+}
+```
+
+Ces données permettent de générer des visualisations interactives (carte, barplot circulaire, simulation de journée) et de comparer les structures de dépenses entre les pays.
 
 
 
@@ -68,3 +72,30 @@ Ces références montrent que les données sur le coût de la vie sont utilisée
 ✔️ **Analyser les inégalités économiques mondiales**  
 
 📌 **Ce projet s’inscrit dans une démarche analytique et exploratoire, visant à offrir un outil interactif, immersive et accessible pour mieux comprendre les écarts économiques mondiaux.** 
+
+
+## **📷 Sources des images**
+
+| Nom          | Lien                                                                                                                                                                                                                                                                                                                                                           |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| avatar1      | [https://i1.sndcdn.com/avatars-NyM8EoH9W2UmWrsu-zfB8Yw-t500x500.jpg](https://i1.sndcdn.com/avatars-NyM8EoH9W2UmWrsu-zfB8Yw-t500x500.jpg)                                                                                                                                                                                                                       |
+| avatar2      | [https://art.pixilart.com/519d22531670ff8.png](https://art.pixilart.com/519d22531670ff8.png)                                                                                                                                                                                                                                                                   |
+| avatar3      | [https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2Fianwxza9szq81.png%3Fwidth%3D1080%26crop%3Dsmart%26auto%3Dwebp%26s%3D95dc61d08256d56628a055f07cd269246f98855d](https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2Fianwxza9szq81.png%3Fwidth%3D1080%26crop%3Dsmart%26auto%3Dwebp%26s%3D95dc61d08256d56628a055f07cd269246f98855d) |
+| dodo         | [https://64.media.tumblr.com/d031a5cf307d50e0cd027fb37ba53457/tumblr\_pc11hqvLWD1xwr65fo1\_500.gif](https://64.media.tumblr.com/d031a5cf307d50e0cd027fb37ba53457/tumblr_pc11hqvLWD1xwr65fo1_500.gif)                                                                                                                                                           |
+| mapFond      | [https://i.pinimg.com/originals/6e/32/a3/6e32a32281a46894e5c5857e19c63cf2.gif](https://i.pinimg.com/originals/6e/32/a3/6e32a32281a46894e5c5857e19c63cf2.gif)                                                                                                                                                                                                   |
+| rocket-pixel | [https://www.vecteezy.com/png/13519076-pixel-art-rocket](https://www.vecteezy.com/png/13519076-pixel-art-rocket)                                                                                                                                                                                                                                               |
+| scene1       | [https://i.pinimg.com/originals/9b/0b/c6/9b0bc63a987fbaa2beaa44ba94e105d7.gif](https://i.pinimg.com/originals/9b/0b/c6/9b0bc63a987fbaa2beaa44ba94e105d7.gif)                                                                                                                                                                                                   |
+| scene2       | [https://64.media.tumblr.com/e542f6cad869ae29d9806ff3a8ac0d85/c3e560fa3a85d23e-a2/s500x750/cf3e94ceb1d0d2c41dc5213ca7c7e4f39a033dac.gif](https://64.media.tumblr.com/e542f6cad869ae29d9806ff3a8ac0d85/c3e560fa3a85d23e-a2/s500x750/cf3e94ceb1d0d2c41dc5213ca7c7e4f39a033dac.gif)                                                                               |
+| scene3       | [https://d112y698adiu2z.cloudfront.net/photos/production/software\_photos/002/429/881/datas/original.gif](https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/429/881/datas/original.gif)                                                                                                                                              |
+| scene4       | [https://i.pinimg.com/originals/65/f6/0f/65f60ff3a1cda360b27f1814943f8b62.gif](https://i.pinimg.com/originals/65/f6/0f/65f60ff3a1cda360b27f1814943f8b62.gif)                                                                                                                                                                                                   |
+| scene5       | [https://mir-s3-cdn-cf.behance.net/project\_modules/disp/64c19667998673.5b4ddee2642c3.gif](https://mir-s3-cdn-cf.behance.net/project_modules/disp/64c19667998673.5b4ddee2642c3.gif)                                                                                                                                                                            |
+| scene6       | [https://mir-s3-cdn-cf.behance.net/project\_modules/hd/7ac05e82098695.5d133ab9ac506.gif](https://mir-s3-cdn-cf.behance.net/project_modules/hd/7ac05e82098695.5d133ab9ac506.gif)                                                                                                                                                                                |
+| scene7       | [https://i.pinimg.com/originals/1b/83/dc/1b83dce6c2a59c92d2dfdd14df85c377.gif](https://i.pinimg.com/originals/1b/83/dc/1b83dce6c2a59c92d2dfdd14df85c377.gif)                                                                                                                                                                                                   |
+| scene8       | [https://wallpapercave.com/wp/wp11115924.gif](https://wallpapercave.com/wp/wp11115924.gif)                                                                                                                                                                                                                                                                     |
+| scene9       | [https://i.pinimg.com/originals/d5/6f/49/d56f4945ea02b29d1ef5a8ea9042c8c9.gif](https://i.pinimg.com/originals/d5/6f/49/d56f4945ea02b29d1ef5a8ea9042c8c9.gif)                                                                                                                                                                                                   |
+| starfield    | [https://cdna.artstation.com/p/assets/images/images/058/151/774/original/yana-chuklova-.gif?1673499537](https://cdna.artstation.com/p/assets/images/images/058/151/774/original/yana-chuklova-.gif?1673499537)                                                                                                                                                 |
+
+
+---
+Ce projet a été réalisé dans le cadre d’un travail académique au sein de la Haute École d’Ingénierie et de Gestion du Canton de Vaud (HEIG-VD).
+
