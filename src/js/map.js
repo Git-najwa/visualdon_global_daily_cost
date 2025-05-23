@@ -1,15 +1,23 @@
 import { drawCircularChart } from './circularChart.js';
 drawCircularChart();
 
+// Modifier la création de la carte pour qu'elle s'adapte au conteneur
 const svg = d3.select("#map");
-svg.attr("width", 1200).attr("height", 620);
 
-const width = +svg.attr("width");
-const height = +svg.attr("height");
+// Définir des dimensions fixes pour la carte
+const width = 1300;  // Augmenté de 1100 à 1300
+const height = 800;  // Augmenté de 700 à 800
 
+svg.attr("width", width)
+   .attr("height", height)
+   .attr("viewBox", `0 0 ${width} ${height}`)
+   .attr("preserveAspectRatio", "xMidYMid meet");
+
+// Ajuster la projection pour ces nouvelles dimensions
 const projection = d3.geoMercator()
-  .scale(125)
-  .translate([width / 2.1, height / 1.5]);
+  .scale(180)  // Augmenté de 160 à 180
+  .center([0, 30]) // Centrer la carte
+  .translate([width / 2, height / 2]);
 
 const path = d3.geoPath().projection(projection);
 

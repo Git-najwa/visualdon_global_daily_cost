@@ -81,19 +81,33 @@
     <br>
     <br>
     <!-- 🛸 Radar Chart / Cockpit -->
+    <div class="toggle-info">
+      <p class="text-sm text-cyan-300">↓ Ce bouton permet de basculer entre les deux vues ↓</p>
+    </div>
+
     <section id="spaceship-section" class="mt-20 space-y-8 flex flex-col items-center">
       <button id="toggleView" class="animated-button">Les 3 pays les plus chers</button>
+      <p class="text-sm text-yellow-300 mt-2">✨ Cliquez sur un pays dans la soucoupe pour voir le détail de ses activités !</p>
       <div id="cockpit-chart" class="mt-6"></div>
       <div id="activityDetails" class="mt-8"></div>
     </section>
 
-    <!-- 🔍 Recherche -->
-    <section id="search-container" class="mt-24 mb-32 flex justify-center">
-      <input type="text" id="country-search" placeholder="Rechercher un pays..." />
-    </section>
-
     <!-- 📊 Graphique circulaire -->
-    <section id="circular-visual" class="my-24">
+    <section id="circular-visual" class="my-32 px-4">
+      <div class="graph-explanation">
+        <h3 class="text-xl text-pink-400 mb-2">Distribution des dépenses quotidiennes par pays</h3>
+      
+        
+        <!-- Barre de recherche -->
+        <div class="search-wrapper">
+          <div class="search-icon"></div>
+          <input 
+            type="text" 
+            id="circular-search" 
+            placeholder="Chercher un pays" 
+          />
+        </div>
+      </div>
       <div id="circular-barplot"></div>
     </section>
 

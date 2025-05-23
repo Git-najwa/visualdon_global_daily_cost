@@ -1,43 +1,43 @@
 {
-  "Afghanistan": {
-    "cost": "72€",
+ "Afghanistan": {
+    "cost": "21€",
     "activities": [
       null,
-      "Eau et électricité: 5.1€",
-      "Petit-déjeuner: 5.8€",
-      "Transport: 5.1€",
-      "Courses: 14.4€",
-      "Souper: 13.0€",
-      "Activité: 10.8€",
-      "Loyer: 18.0€",
+      "Eau et électricité: 1.5€",
+      "Petit-déjeuner: 1.7€",
+      "Transport: 1.5€",
+      "Courses: 4.2€",
+      "Souper: 3.8€",
+      "Activité: 3.2€",
+      "Loyer: 5.3€",
       null
     ]
   },
-  "Albania": {
-    "cost": "74€",
+   "Albania": {
+    "cost": "42€",
     "activities": [
       null,
-      "Eau et électricité: 5.2€",
-      "Petit-déjeuner: 5.9€",
-      "Transport: 5.2€",
-      "Courses: 14.8€",
-      "Souper: 13.3€",
-      "Activité: 11.1€",
-      "Loyer: 18.5€",
+      "Eau et électricité: 2.9€",
+      "Petit-déjeuner: 3.4€",
+      "Transport: 2.9€",
+      "Courses: 8.4€",
+      "Souper: 7.6€",
+      "Activité: 6.3€",
+      "Loyer: 10.5€",
       null
     ]
   },
   "Algeria": {
-    "cost": "74€",
+    "cost": "24€",
     "activities": [
       null,
-      "Eau et électricité: 5.2€",
-      "Petit-déjeuner: 6.0€",
-      "Transport: 5.2€",
-      "Courses: 14.9€",
-      "Souper: 13.4€",
-      "Activité: 11.2€",
-      "Loyer: 18.6€",
+      "Eau et électricité: 1.7€",
+      "Petit-déjeuner: 1.9€",
+      "Transport: 1.7€",
+      "Courses: 4.8€",
+      "Souper: 4.3€",
+      "Activité: 3.6€",
+      "Loyer: 6.0€",
       null
     ]
   },
@@ -55,31 +55,17 @@
       null
     ]
   },
-  "Antarctica": {
-    "cost": "33€",
-    "activities": [
-      null,
-      "Eau et électricité: 2.3€",
-      "Petit-déjeuner: 2.6€",
-      "Transport: 2.3€",
-      "Courses: 6.6€",
-      "Souper: 5.9€",
-      "Activité: 4.9€",
-      "Loyer: 8.2€",
-      null
-    ]
-  },
   "Argentina": {
-    "cost": "79€",
+    "cost": "38€",
     "activities": [
       null,
-      "Eau et électricité: 5.5€",
-      "Petit-déjeuner: 6.3€",
-      "Transport: 5.5€",
-      "Courses: 15.8€",
-      "Souper: 14.2€",
-      "Activité: 11.9€",
-      "Loyer: 19.8€",
+      "Eau et électricité: 2.7€",
+      "Petit-déjeuner: 3.0€",
+      "Transport: 2.7€",
+      "Courses: 9.5€",
+      "Souper: 8.6€",
+      "Activité: 7.0€",
+      "Loyer: 11.4€",
       null
     ]
   },
@@ -98,16 +84,16 @@
     ]
   },
   "Australia": {
-    "cost": "46€",
+    "cost": "73€",
     "activities": [
       null,
-      "Eau et électricité: 3.2€",
-      "Petit-déjeuner: 3.7€",
-      "Transport: 3.2€",
-      "Courses: 9.2€",
-      "Souper: 8.3€",
-      "Activité: 6.9€",
-      "Loyer: 11.5€",
+      "Eau et électricité: 5.1€",
+      "Petit-déjeuner: 5.8€",
+      "Transport: 5.1€",
+      "Courses: 14.6€",
+      "Souper: 13.1€",
+      "Activité: 11.0€",
+      "Loyer: 18.3€",
       null
     ]
   },
@@ -126,44 +112,44 @@
     ]
   },
   "Azerbaijan": {
-    "cost": "87€",
+    "cost": "32€",
     "activities": [
       null,
-      "Eau et électricité: 6.1€",
-      "Petit-déjeuner: 7.0€",
-      "Transport: 6.1€",
-      "Courses: 17.5€",
-      "Souper: 15.7€",
-      "Activité: 13.1€",
-      "Loyer: 21.8€",
+      "Eau et électricité: 2.2€",
+      "Petit-déjeuner: 2.6€",
+      "Transport: 2.2€",
+      "Courses: 8.0€",
+      "Souper: 7.0€",
+      "Activité: 6.0€",
+      "Loyer: 10.0€",
       null
     ]
   },
-  "Bahamas": {
-    "cost": "65€",
+ "Bahamas": {
+    "cost": "102€",
     "activities": [
       null,
-      "Eau et électricité: 4.5€",
-      "Petit-déjeuner: 5.2€",
-      "Transport: 4.5€",
-      "Courses: 13.0€",
-      "Souper: 11.7€",
-      "Activité: 9.7€",
-      "Loyer: 16.2€",
+      "Eau et électricité: 7.2€",
+      "Petit-déjeuner: 8.2€",
+      "Transport: 7.2€",
+      "Courses: 20.4€",
+      "Souper: 18.4€",
+      "Activité: 15.3€",
+      "Loyer: 25.5€",
       null
     ]
   },
-  "Bangladesh": {
-    "cost": "87€",
+"Bangladesh": {
+    "cost": "22€",
     "activities": [
       null,
-      "Eau et électricité: 6.1€",
-      "Petit-déjeuner: 7.0€",
-      "Transport: 6.1€",
-      "Courses: 17.5€",
-      "Souper: 15.7€",
-      "Activité: 13.1€",
-      "Loyer: 21.8€",
+      "Eau et électricité: 1.5€",
+      "Petit-déjeuner: 1.8€",
+      "Transport: 1.5€",
+      "Courses: 4.4€",
+      "Souper: 4.0€",
+      "Activité: 3.3€",
+      "Loyer: 5.5€",
       null
     ]
   },
@@ -210,16 +196,16 @@
     ]
   },
   "Benin": {
-    "cost": "88€",
+    "cost": "21€",
     "activities": [
       null,
-      "Eau et électricité: 6.2€",
-      "Petit-déjeuner: 7.1€",
-      "Transport: 6.2€",
-      "Courses: 17.7€",
-      "Souper: 15.9€",
-      "Activité: 13.3€",
-      "Loyer: 22.1€",
+      "Eau et électricité: 1.5€",
+      "Petit-déjeuner: 1.7€",
+      "Transport: 1.5€",
+      "Courses: 4.2€",
+      "Souper: 3.8€",
+      "Activité: 3.1€",
+      "Loyer: 5.3€",
       null
     ]
   },
@@ -280,16 +266,16 @@
     ]
   },
   "Brazil": {
-    "cost": "58€",
+    "cost": "27€",
     "activities": [
       null,
-      "Eau et électricité: 4.1€",
-      "Petit-déjeuner: 4.7€",
-      "Transport: 4.1€",
-      "Courses: 11.6€",
-      "Souper: 10.5€",
-      "Activité: 8.7€",
-      "Loyer: 14.5€",
+      "Eau et électricité: 1.9€",
+      "Petit-déjeuner: 2.2€",
+      "Transport: 1.9€",
+      "Courses: 6.8€",
+      "Souper: 6.1€",
+      "Activité: 5.4€",
+      "Loyer: 8.8€",
       null
     ]
   },
@@ -434,30 +420,30 @@
     ]
   },
   "China": {
-    "cost": "76€",
+    "cost": "34€",
     "activities": [
       null,
-      "Eau et électricité: 5.3€",
-      "Petit-déjeuner: 6.1€",
-      "Transport: 5.3€",
-      "Courses: 15.2€",
-      "Souper: 13.7€",
-      "Activité: 11.4€",
-      "Loyer: 19.0€",
+      "Eau et électricité: 2.4€",
+      "Petit-déjeuner: 2.7€",
+      "Transport: 2.4€",
+      "Courses: 6.8€",
+      "Souper: 6.1€",
+      "Activité: 5.1€",
+      "Loyer: 8.5€",
       null
     ]
   },
   "Colombia": {
-    "cost": "71€",
+    "cost": "31€",
     "activities": [
       null,
-      "Eau et électricité: 5.0€",
-      "Petit-déjeuner: 5.7€",
-      "Transport: 5.0€",
-      "Courses: 14.2€",
-      "Souper: 12.7€",
-      "Activité: 10.6€",
-      "Loyer: 17.7€",
+      "Eau et électricité: 2.2€",
+      "Petit-déjeuner: 2.5€",
+      "Transport: 2.2€",
+      "Courses: 6.2€",
+      "Souper: 5.6€",
+      "Activité: 4.6€",
+      "Loyer: 7.8€",
       null
     ]
   },
@@ -573,17 +559,17 @@
       null
     ]
   },
- "Denmark": {
-    "cost": "88€",
+  "Denmark": {
+    "cost": "75€",
     "activities": [
       null,
-      "Eau et électricité: 6.1€",
-      "Petit-déjeuner: 7.0€",
-      "Transport: 6.1€",
-      "Courses: 17.9€",
-      "Souper: 16.1€",
-      "Activité: 13.4€",
-      "Loyer: 22.2€",
+      "Eau et électricité: 5.3€",
+      "Petit-déjeuner: 6.0€",
+      "Transport: 5.3€",
+      "Courses: 15.0€",
+      "Souper: 13.5€",
+      "Activité: 11.3€",
+      "Loyer: 18.8€",
       null
     ]
   },
@@ -630,16 +616,16 @@
     ]
   },
   "Egypt": {
-    "cost": "48€",
+    "cost": "28€",
     "activities": [
       null,
-      "Eau et électricité: 3.3€",
-      "Petit-déjeuner: 3.8€",
-      "Transport: 3.3€",
-      "Courses: 9.6€",
-      "Souper: 8.6€",
-      "Activité: 7.2€",
-      "Loyer: 11.9€",
+      "Eau et électricité: 2.0€",
+      "Petit-déjeuner: 2.2€",
+      "Transport: 2.0€",
+      "Courses: 5.6€",
+      "Souper: 5.0€",
+      "Activité: 4.2€",
+      "Loyer: 7.0€",
       null
     ]
   },
@@ -770,16 +756,16 @@
     ]
   },
   "France": {
-    "cost": "40€",
+    "cost": "64€",
     "activities": [
       null,
-      "Eau et électricité: 2.8€",
-      "Petit-déjeuner: 3.2€",
-      "Transport: 2.8€",
-      "Courses: 7.9€",
-      "Souper: 7.2€",
-      "Activité: 6.0€",
-      "Loyer: 9.9€",
+      "Eau et électricité: 4.5€",
+      "Petit-déjeuner: 5.1€",
+      "Transport: 4.5€",
+      "Courses: 12.8€",
+      "Souper: 11.5€",
+      "Activité: 9.6€",
+      "Loyer: 16.0€",
       null
     ]
   },
@@ -854,16 +840,16 @@
     ]
   },
   "Greece": {
-    "cost": "85€",
+    "cost": "48€",
     "activities": [
       null,
-      "Eau et électricité: 6.0€",
-      "Petit-déjeuner: 6.8€",
-      "Transport: 6.0€",
-      "Courses: 17.1€",
-      "Souper: 15.4€",
-      "Activité: 12.8€",
-      "Loyer: 21.4€",
+      "Eau et électricité: 3.4€",
+      "Petit-déjeuner: 3.8€",
+      "Transport: 3.4€",
+      "Courses: 9.6€",
+      "Souper: 8.6€",
+      "Activité: 7.2€",
+      "Loyer: 12.0€",
       null
     ]
   },
@@ -979,31 +965,31 @@
       null
     ]
   },
-  "Iceland": {
-    "cost": "45€",
+ "Iceland": {
+    "cost": "102€",
     "activities": [
       null,
-      "Eau et électricité: 3.1€",
-      "Petit-déjeuner: 3.6€",
-      "Transport: 3.1€",
-      "Courses: 8.9€",
-      "Souper: 8.0€",
-      "Activité: 6.7€",
-      "Loyer: 11.2€",
+      "Eau et électricité: 7.3€",
+      "Petit-déjeuner: 8.2€",
+      "Transport: 7.3€",
+      "Courses: 20.4€",
+      "Souper: 18.4€",
+      "Activité: 15.3€",
+      "Loyer: 25.5€",
       null
     ]
   },
   "India": {
-    "cost": "15€",
+    "cost": "23€",
     "activities": [
       null,
-      "Eau et électricité: 1.0€",
-      "Petit-déjeuner: 1.2€",
-      "Transport: 1.0€",
-      "Courses: 3.0€",
-      "Souper: 2.7€",
-      "Activité: 2.2€",
-      "Loyer: 3.7€",
+      "Eau et électricité: 1.6€",
+      "Petit-déjeuner: 1.8€",
+      "Transport: 1.6€",
+      "Courses: 4.6€",
+      "Souper: 4.1€",
+      "Activité: 3.4€",
+      "Loyer: 5.8€",
       null
     ]
   },
@@ -1050,16 +1036,16 @@
     ]
   },
   "Ireland": {
-    "cost": "89€",
+    "cost": "78€",
     "activities": [
       null,
-      "Eau et électricité: 6.2€",
-      "Petit-déjeuner: 7.1€",
-      "Transport: 6.2€",
-      "Courses: 17.8€",
-      "Souper: 16.0€",
-      "Activité: 13.4€",
-      "Loyer: 22.3€",
+      "Eau et électricité: 5.5€",
+      "Petit-déjeuner: 6.2€",
+      "Transport: 5.5€",
+      "Courses: 15.6€",
+      "Souper: 14.0€",
+      "Activité: 11.7€",
+      "Loyer: 19.5€",
       null
     ]
   },
@@ -1078,16 +1064,16 @@
     ]
   },
   "Italy": {
-    "cost": "88€",
+    "cost": "56€",
     "activities": [
       null,
-      "Eau et électricité: 6.2€",
-      "Petit-déjeuner: 7.0€",
-      "Transport: 6.2€",
-      "Courses: 17.6€",
-      "Souper: 15.8€",
-      "Activité: 13.2€",
-      "Loyer: 22.0€",
+      "Eau et électricité: 3.9€",
+      "Petit-déjeuner: 4.5€",
+      "Transport: 3.9€",
+      "Courses: 11.2€",
+      "Souper: 10.1€",
+      "Activité: 8.4€",
+      "Loyer: 14.0€",
       null
     ]
   },
@@ -1301,17 +1287,17 @@
       null
     ]
   },
-  "Luxembourg": {
-    "cost": "69€",
+ "Luxembourg": {
+    "cost": "85€",
     "activities": [
       null,
-      "Eau et électricité: 4.8€",
-      "Petit-déjeuner: 5.5€",
-      "Transport: 4.8€",
-      "Courses: 13.8€",
-      "Souper: 12.4€",
-      "Activité: 10.4€",
-      "Loyer: 17.3€",
+      "Eau et électricité: 6.0€",
+      "Petit-déjeuner: 6.8€",
+      "Transport: 6.0€",
+      "Courses: 17.0€",
+      "Souper: 15.3€",
+      "Activité: 12.8€",
+      "Loyer: 21.3€",
       null
     ]
   },
@@ -1399,17 +1385,17 @@
       null
     ]
   },
-"Mexico": {
-    "cost": "49€",
+  "Mexico": {
+    "cost": "39€",
     "activities": [
       null,
-      "Eau et électricité: 3.4€",
-      "Petit-déjeuner: 3.9€",
-      "Transport: 3.4€",
-      "Courses: 9.8€",
-      "Souper: 8.8€",
-      "Activité: 7.3€",
-      "Loyer: 12.2€",
+      "Eau et électricité: 2.7€",
+      "Petit-déjeuner: 3.1€",
+      "Transport: 2.7€",
+      "Courses: 7.8€",
+      "Souper: 7.0€",
+      "Activité: 5.9€",
+      "Loyer: 9.8€",
       null
     ]
   },
@@ -1455,17 +1441,17 @@
       null
     ]
   },
-  "Morocco": {
-    "cost": "76€",
+ "Morocco": {
+    "cost": "28€",
     "activities": [
       null,
-      "Eau et électricité: 5.3€",
-      "Petit-déjeuner: 6.1€",
-      "Transport: 5.3€",
-      "Courses: 15.1€",
-      "Souper: 13.6€",
-      "Activité: 11.3€",
-      "Loyer: 18.9€",
+      "Eau et électricité: 2.0€",
+      "Petit-déjeuner: 2.3€",
+      "Transport: 2.0€",
+      "Courses: 7.0€",
+      "Souper: 6.4€",
+      "Activité: 5.3€",
+      "Loyer: 8.8€",
       null
     ]
   },
@@ -1526,30 +1512,30 @@
     ]
   },
   "Nepal": {
-    "cost": "61€",
+    "cost": "25€",
     "activities": [
       null,
-      "Eau et électricité: 4.3€",
-      "Petit-déjeuner: 4.9€",
-      "Transport: 4.3€",
-      "Courses: 12.2€",
-      "Souper: 11.0€",
-      "Activité: 9.2€",
-      "Loyer: 15.3€",
+      "Eau et électricité: 1.8€",
+      "Petit-déjeuner: 2.0€",
+      "Transport: 1.8€",
+      "Courses: 5.0€",
+      "Souper: 4.5€",
+      "Activité: 3.8€",
+      "Loyer: 6.2€",
       null
     ]
   },
-  "Netherlands": {
-    "cost": "81€",
+"Netherlands": {
+    "cost": "74€",
     "activities": [
       null,
-      "Eau et électricité: 5.7€",
-      "Petit-déjeuner: 6.5€",
-      "Transport: 5.7€",
-      "Courses: 16.2€",
-      "Souper: 14.6€",
-      "Activité: 12.1€",
-      "Loyer: 20.2€",
+      "Eau et électricité: 5.3€",
+      "Petit-déjeuner: 5.9€",
+      "Transport: 5.3€",
+      "Courses: 14.8€",
+      "Souper: 13.3€",
+      "Activité: 11.1€",
+      "Loyer: 18.5€",
       null
     ]
   },
@@ -1623,31 +1609,17 @@
       null
     ]
   },
-  "North Korea": {
-    "cost": "83€",
-    "activities": [
-      null,
-      "Eau et électricité: 5.8€",
-      "Petit-déjeuner: 6.6€",
-      "Transport: 5.8€",
-      "Courses: 16.6€",
-      "Souper: 14.9€",
-      "Activité: 12.5€",
-      "Loyer: 20.8€",
-      null
-    ]
-  },
   "Norway": {
-    "cost": "45€",
+    "cost": "77€",
     "activities": [
       null,
-      "Eau et électricité: 3.2€",
-      "Petit-déjeuner: 3.6€",
-      "Transport: 3.2€",
-      "Courses: 9.0€",
-      "Souper: 8.1€",
-      "Activité: 6.8€",
-      "Loyer: 11.3€",
+      "Eau et électricité: 5.5€",
+      "Petit-déjeuner: 6.2€",
+      "Transport: 5.5€",
+      "Courses: 15.4€",
+      "Souper: 13.9€",
+      "Activité: 11.6€",
+      "Loyer: 19.3€",
       null
     ]
   },
@@ -1666,30 +1638,30 @@
     ]
   },
   "Pakistan": {
-    "cost": "48€",
+    "cost": "17€",
     "activities": [
       null,
-      "Eau et électricité: 3.3€",
-      "Petit-déjeuner: 3.8€",
-      "Transport: 3.3€",
-      "Courses: 9.5€",
-      "Souper: 8.6€",
-      "Activité: 7.1€",
-      "Loyer: 11.9€",
+      "Eau et électricité: 1.2€",
+      "Petit-déjeuner: 1.4€",
+      "Transport: 1.2€",
+      "Courses: 3.4€",
+      "Souper: 3.1€",
+      "Activité: 2.5€",
+      "Loyer: 4.2€",
       null
     ]
   },
   "Palestine": {
-    "cost": "79€",
+    "cost": "40€",
     "activities": [
       null,
-      "Eau et électricité: 5.5€",
-      "Petit-déjeuner: 6.3€",
-      "Transport: 5.5€",
-      "Courses: 15.8€",
-      "Souper: 14.2€",
-      "Activité: 11.9€",
-      "Loyer: 19.8€",
+      "Eau et électricité: 2.8€",
+      "Petit-déjeuner: 3.2€",
+      "Transport: 2.8€",
+      "Courses: 10.0€",
+      "Souper: 9.0€",
+      "Activité: 7.5€",
+      "Loyer: 12.0€",
       null
     ]
   },
@@ -1778,16 +1750,16 @@
     ]
   },
   "Portugal": {
-    "cost": "29€",
+    "cost": "51€",
     "activities": [
       null,
-      "Eau et électricité: 2.0€",
-      "Petit-déjeuner: 2.3€",
-      "Transport: 2.0€",
-      "Courses: 5.8€",
-      "Souper: 5.2€",
-      "Activité: 4.3€",
-      "Loyer: 7.2€",
+      "Eau et électricité: 3.6€",
+      "Petit-déjeuner: 4.1€",
+      "Transport: 3.6€",
+      "Courses: 10.2€",
+      "Souper: 9.2€",
+      "Activité: 7.6€",
+      "Loyer: 12.8€",
       null
     ]
   },
@@ -1833,17 +1805,17 @@
       null
     ]
   },
-  "Russia": {
-    "cost": "34€",
+   "Russia": {
+    "cost": "24€",
     "activities": [
       null,
-      "Eau et électricité: 2.4€",
-      "Petit-déjeuner: 2.7€",
-      "Transport: 2.4€",
-      "Courses: 6.8€",
-      "Souper: 6.1€",
-      "Activité: 5.1€",
-      "Loyer: 8.5€",
+      "Eau et électricité: 1.7€",
+      "Petit-déjeuner: 1.9€",
+      "Transport: 1.7€",
+      "Courses: 4.8€",
+      "Souper: 4.3€",
+      "Activité: 3.6€",
+      "Loyer: 6.0€",
       null
     ]
   },
@@ -2016,30 +1988,30 @@
     ]
   },
   "South Korea": {
-    "cost": "50€",
+    "cost": "59€",
     "activities": [
       null,
-      "Eau et électricité: 3.6€",
-      "Petit-déjeuner: 3.9€",
-      "Transport: 3.6€",
-      "Courses: 10.0€",
-      "Souper: 9.2€",
-      "Activité: 7.5€",
-      "Loyer: 12.5€",
+      "Eau et électricité: 4.1€",
+      "Petit-déjeuner: 4.7€",
+      "Transport: 4.1€",
+      "Courses: 11.8€",
+      "Souper: 10.6€",
+      "Activité: 8.9€",
+      "Loyer: 14.8€",
       null
     ]
   },
   "Spain": {
-    "cost": "76€",
+    "cost": "52€",
     "activities": [
       null,
-      "Eau et électricité: 5.3€",
-      "Petit-déjeuner: 6.0€",
-      "Transport: 5.3€",
-      "Courses: 15.1€",
-      "Souper: 13.6€",
-      "Activité: 11.3€",
-      "Loyer: 18.9€",
+      "Eau et électricité: 3.6€",
+      "Petit-déjeuner: 4.2€",
+      "Transport: 3.6€",
+      "Courses: 10.4€",
+      "Souper: 9.4€",
+      "Activité: 7.8€",
+      "Loyer: 13.0€",
       null
     ]
   },
@@ -2058,16 +2030,16 @@
     ]
   },
   "Sudan": {
-    "cost": "76€",
+    "cost": "28€",
     "activities": [
       null,
-      "Eau et électricité: 5.3€",
-      "Petit-déjeuner: 6.1€",
-      "Transport: 5.3€",
-      "Courses: 15.2€",
-      "Souper: 13.7€",
-      "Activité: 11.4€",
-      "Loyer: 19.0€",
+      "Eau et électricité: 2.0€",
+      "Petit-déjeuner: 2.2€",
+      "Transport: 2.0€",
+      "Courses: 5.6€",
+      "Souper: 5.0€",
+      "Activité: 4.2€",
+      "Loyer: 7.0€",
       null
     ]
   },
@@ -2114,16 +2086,16 @@
     ]
   },
   "Syria": {
-    "cost": "63€",
+    "cost": "23€",
     "activities": [
       null,
-      "Eau et électricité: 4.4€",
-      "Petit-déjeuner: 5.1€",
-      "Transport: 4.4€",
-      "Courses: 12.6€",
-      "Souper: 11.4€",
-      "Activité: 9.5€",
-      "Loyer: 15.8€",
+      "Eau et électricité: 1.6€",
+      "Petit-déjeuner: 1.8€",
+      "Transport: 1.6€",
+      "Courses: 4.6€",
+      "Souper: 4.1€",
+      "Activité: 3.5€",
+      "Loyer: 5.8€",
       null
     ]
   },
@@ -2226,30 +2198,30 @@
     ]
   },
   "Tunisia": {
-    "cost": "18€",
+    "cost": "27€",
     "activities": [
       null,
-      "Eau et électricité: 1.3€",
-      "Petit-déjeuner: 1.4€",
-      "Transport: 1.3€",
-      "Courses: 3.6€",
-      "Souper: 3.2€",
-      "Activité: 2.7€",
-      "Loyer: 4.5€",
+      "Eau et électricité: 1.9€",
+      "Petit-déjeuner: 2.2€",
+      "Transport: 1.9€",
+      "Courses: 5.4€",
+      "Souper: 4.9€",
+      "Activité: 4.0€",
+      "Loyer: 6.8€",
       null
     ]
   },
   "Turkey": {
-    "cost": "20€",
+    "cost": "39€",
     "activities": [
       null,
-      "Eau et électricité: 1.4€",
-      "Petit-déjeuner: 1.6€",
-      "Transport: 1.4€",
-      "Courses: 4.0€",
-      "Souper: 3.6€",
-      "Activité: 3.0€",
-      "Loyer: 5.0€",
+      "Eau et électricité: 2.7€",
+      "Petit-déjeuner: 3.1€",
+      "Transport: 2.7€",
+      "Courses: 7.8€",
+      "Souper: 7.0€",
+      "Activité: 5.9€",
+      "Loyer: 9.8€",
       null
     ]
   },
@@ -2394,16 +2366,16 @@
     ]
   },
   "Vietnam": {
-    "cost": "90€",
+    "cost": "32€",
     "activities": [
       null,
-      "Eau et électricité: 6.3€",
-      "Petit-déjeuner: 7.2€",
-      "Transport: 6.3€",
-      "Courses: 18.0€",
-      "Souper: 16.2€",
-      "Activité: 13.5€",
-      "Loyer: 22.5€",
+      "Eau et électricité: 2.2€",
+      "Petit-déjeuner: 2.6€",
+      "Transport: 2.2€",
+      "Courses: 6.4€",
+      "Souper: 5.8€",
+      "Activité: 4.8€",
+      "Loyer: 8.0€",
       null
     ]
   },

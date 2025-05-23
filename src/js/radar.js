@@ -76,21 +76,59 @@ function drawUFO(color = "#38bdf8") {
     .attr("stroke-width", 2)
     .attr("stroke-dasharray", "5 5");
 
-  // Ajout des pays
-  g.append("g")
+  // Modification de l'ajout des pays
+  const countryTexts = g.append("g")
     .attr("text-anchor", "middle")
     .attr("transform", "translate(0, 0)")
     .selectAll("text")
     .data(currentData)
     .enter()
     .append("text")
+    .attr("class", "country-name-radar")
     .attr("y", (d, i) => i * 25 - 25)
     .text(d => `${d.name} (${d.value}€)`)
     .attr("fill", "#fff")
     .attr("font-size", "12px")
     .style("font-family", "'Press Start 2P', cursive")
-    .style("cursor", "pointer")
+    .style("cursor", "pointer");
+
+  // Ajouter une animation initiale pour attirer l'attention
+  countryTexts
+    .style("opacity", 0)
+    .transition()
+    .duration(500)
+    .delay((d, i) => i * 200)
+    .style("opacity", 1)
+    .on("end", function() {
+      d3.select(this).classed("pulse", true);
+    });
+
+  // Améliorer l'interaction
+  countryTexts
+    .on("mouseover", function() {
+      d3.select(this)
+        .transition()
+        .duration(200)
+        .attr("fill", color)
+        .attr("font-size", "14px");
+    })
+    .on("mouseout", function() {
+      d3.select(this)
+        .transition()
+        .duration(200)
+        .attr("fill", "#fff")
+        .attr("font-size", "12px");
+    })
     .on("click", function(event, d) {
+      // Effet visuel au clic
+      d3.select(this)
+        .transition()
+        .duration(100)
+        .attr("fill", "#facc15")
+        .transition()
+        .duration(500)
+        .attr("fill", color);
+
       showActivities(d.name);
     });
 }

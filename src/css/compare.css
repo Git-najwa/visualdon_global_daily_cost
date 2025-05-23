@@ -30,15 +30,24 @@ body {
   }
   
   .country-block {
-    background: radial-gradient(circle at top, #b886ff, #000022);
+    background: linear-gradient(145deg, #0a0a3d, #000022);
+    border: 2px solid rgba(56, 189, 248, 0.3);
+    backdrop-filter: blur(8px);
+    box-shadow: 
+      0 0 30px rgba(56, 189, 248, 0.2),
+      inset 0 0 50px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
     padding: 1.5rem;
     border-radius: 30px;
     width: 420px;
-    box-shadow: 0 0 25px #9b15fa88, 0 0 10px #201184 inset;
-    transition: transform 0.3s ease; 
+    position: relative;
+    overflow: hidden;
   }
   .country-block:hover {
-    transform: scale(1.015);
+    transform: translateZ(20px) scale(1.02);
+    box-shadow: 
+      0 0 40px rgba(56, 189, 248, 0.4),
+      inset 0 0 60px rgba(0, 0, 0, 0.6);
   }
   
   .country-block h2 {

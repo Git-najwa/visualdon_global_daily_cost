@@ -65,7 +65,13 @@ a.back-link {
   border-radius: 16px;
   overflow: hidden;
   animation: floatScene 6s ease-in-out infinite;
-  box-shadow: 0 0 40px #111 inset, 0 0 10px #3b82f6;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 40px #111 inset, 0 0 20px rgba(243, 92, 32, 0.3);
+}
+
+.activity-block:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 40px #111 inset, 0 0 30px rgba(243, 92, 32, 0.5);
 }
 
 @keyframes floatScene {
@@ -86,6 +92,8 @@ a.back-link {
   padding: 6px 10px;
   border-radius: 8px;
   box-shadow: 0 0 4px #8f15fa;
+  border: 1px solid rgba(243, 92, 32, 0.3);
+  animation: pulse 2s infinite;
 }
 
 .activity-block .bubble {
@@ -99,6 +107,15 @@ a.back-link {
   font-size: 0.6rem;
   max-width: 70%;
   box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+  border: 2px solid rgba(243, 92, 32, 0.3);
+  backdrop-filter: blur(5px);
+  transform: translateY(0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activity-block .bubble:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(243, 92, 32, 0.2);
 }
 
 .activity-block .cost {
@@ -381,7 +398,8 @@ body::-webkit-scrollbar,
 #progress-fill {
   height: 100%;
   width: 0%;
-  background: linear-gradient(90deg, #f35c20, #0a0a3d);
+  background: linear-gradient(90deg, #f35c20, #f35c20);
+  box-shadow: 0 0 10px rgba(243, 92, 32, 0.5);
   transition: width 0.3s ease;
 }
 
@@ -402,6 +420,8 @@ body::-webkit-scrollbar,
   animation: fadeInDown 0.4s ease-out, fadeOut 0.4s ease-in 4.6s forwards;
   text-align: center;
   pointer-events: none;
+  border: 2px solid #f35c20;
+  box-shadow: 0 0 20px rgba(243, 92, 32, 0.3);
 }
 @keyframes fadeInDown {
   from {

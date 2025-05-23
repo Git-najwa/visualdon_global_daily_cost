@@ -15,32 +15,23 @@ body {
 }
 
 #map-container {
+  width: 1300px;  /* Augmenté de 1100px à 1300px */
+  margin: 0 auto;
   position: relative;
   background: #0000007c;
   border-radius: 20px;
-  height: 700px;
-}
-
-button {
-  cursor: pointer;
-  transition: background 0.3s;
-  font-family: 'Pixelify Sans', sans-serif;
-}
-
-button:hover {
-  background: #2563eb;
+  height: 800px;  /* Augmenté de 700px à 800px */
+  overflow: visible;
+  padding: 20px;
 }
 
 #map {
+  width: 100%;
+  height: 100%;
   display: block;
-  margin: 0 auto;
-  max-width: 90vw;
-  height: auto;
-  image-rendering: pixelated;
-  filter: contrast(250%) brightness(1.2) saturate(2);
-  mix-blend-mode: screen;
 }
 
+/* Supprimer ou commenter toutes les media queries liées à map */
 .pixel-overlay {
   position: fixed;
   top: 0;
@@ -172,6 +163,19 @@ button:hover {
   animation: gradientMove 5s ease infinite;
   box-shadow: 0 0 12px #38bdf8, 0 0 20px #38bdf8;
   background-image: linear-gradient(45deg, #38bdf8, #60a5fa, #818cf8, #38bdf8);
+  padding-right: 3rem;
+}
+
+.animated-button::after {
+  content: "⇅";
+  position: absolute;
+  right: 1rem;
+  animation: float 1s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
 }
 
 .animated-button.low {
@@ -192,6 +196,52 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.search-wrapper {
+  width: 100%;
+  max-width: 600px;
+  margin: 0.5rem auto; /* Réduire les marges */
+  position: relative;
+  margin-bottom: 1rem; /* Ajouter un petit espacement en bas de la barre de recherche */
+}
+
+.search-wrapper .search-icon {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#circular-search {
+  width: 600px;
+  padding: 1.2rem 2rem;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px;
+  color: #38bdf8; /* Changer la couleur du texte en bleu clair */
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 50px;
+  text-align: left;
+  letter-spacing: 1px;
+  box-shadow: 0 0 12px #fb923c, 0 0 30px #facc15;
+  outline: none;
+}
+
+.search-helper {
+  font-size: 0.7rem;
+  color: #38bdf8;
+  margin-top: 0.5rem; /* Réduire l'espacement du texte d'aide */
+  margin-bottom: 1rem; /* Ajouter un margin-bottom pour garder un peu d'espace avec le graphique */
+  text-align: center;
+}
+
+/* Style pour les segments lors de la recherche */
+.segment {
+  transition: opacity 0.3s ease, filter 0.3s ease;
 }
 
 #country-search {
@@ -253,6 +303,8 @@ path.dimmed {
   white-space: nowrap;
   z-index: 100;
   transition: opacity 0.2s ease;
+  border: 1px solid #3b82f6; /* Bordure bleue pour la carte */
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
 }
 
 #tooltip.hidden {
@@ -325,24 +377,50 @@ path.dimmed {
  /* Graphique Circulaire  */
  #circular-barplot {
   width: 100%;
-  max-width: 720px;
+  max-width: 900px;  /* Réduits de 1400px à 900px */
   margin: 0 auto;
-  padding: 0rem 0;
+  /* padding: 2rem 0; */
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-svg {
-  display: block;
-  margin: 0 auto;
+  margin-top: 1rem; /* Réduire l'espace entre la barre de recherche et le graphique */
 }
 
 #circular-barplot svg {
-  z-index: 1;
-  position: relative;
-}  
+  width: 100%;
+  height: auto;
+  max-width: 900px;  /* Réduits de 1400px à 900px */
+}
 
+/* Améliorer la visibilité des segments */
+.segment {
+  cursor: pointer;
+  stroke: #000;
+  stroke-width: 0.5px;
+  stroke-opacity: 0.3;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+  vector-effect: non-scaling-stroke;
+}
+
+.legend-item {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.legend-item:hover {
+  opacity: 0.7;
+}
+
+/* Style pour les segments désactivés */
+.segment.dimmed {
+  opacity: 0.1;
+}
+
+/* Style pour les segments actifs */
+.segment.active {
+  opacity: 1;
+  filter: brightness(1.2);
+}
 
 #activityDetails {
   margin-top: 2rem;
@@ -569,4 +647,103 @@ svg {
   0% { transform: translateX(-50%) scale(1); }
   50% { transform: translateX(-50%) scale(1.05); }
   100% { transform: translateX(-50%) scale(1); }
+}
+
+/* Ajouter l'effet solaire */
+#circular-barplot::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 238, 51, 0.2) 0%,
+    rgba(255, 199, 16, 0.15) 20%,
+    rgba(251, 146, 60, 0.1) 40%,
+    rgba(249, 115, 22, 0.05) 60%,
+    transparent 80%
+  );
+  animation: solarGlow 4s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes solarGlow {
+  0%, 100% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}
+
+/* Ajuster le conteneur pour l'effet */
+#circular-barplot {
+  position: relative;
+  overflow: visible;
+}
+
+.tooltip {
+  position: fixed !important;
+  pointer-events: none;
+  transition: transform 0.1s ease;
+  transform-origin: top left;
+  max-width: 200px;
+  backdrop-filter: blur(5px);
+}
+
+.segment {
+  transition: all 0.3s ease;
+}
+
+.segment:hover {
+  transition: all 0.2s ease;
+}
+
+
+/* Ajuster l'espacement de la section du graphique circulaire */
+#circular-visual {
+  margin: 1rem auto; /* Réduire de my-32 à 1rem */
+}
+
+/* Réduire l'espace sous le titre */
+.graph-explanation h3 {
+  margin-bottom: 2rem; /* Réduire mb-2 à mb-1 */
+  margin-top: 3rem;
+}
+
+
+
+/* Ajuster la barre de recherche */
+.search-wrapper {
+  margin: 0.5rem auto; /* Réduire les marges */
+}
+
+.graph-explanation h3 {
+  font-family: 'Press Start 2P', cursive;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+}
+
+.graph-explanation h3::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent,
+    rgba(236, 72, 153, 0.7),
+    rgba(139, 92, 246, 0.7),
+    rgba(34, 211, 238, 0.7),
+    transparent
+  );
 }
