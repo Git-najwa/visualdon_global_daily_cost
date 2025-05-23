@@ -1,11 +1,12 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  root: '.', // Définit la racine du projet
+  root: '.',
+  base: './', // Ajoutez cette ligne pour les chemins relatifs
   server: {
-    port: 3000, // Port du serveur de développement
+    port: 3000,
   },
   build: {
-    outDir: 'dist', // Répertoire de sortie pour les fichiers buildés
+    outDir: 'dist',
   }
 });

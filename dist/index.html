@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Combien coûte un jour de vie ?</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- D3.js & TopoJSON -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://unpkg.com/topojson@3"></script>
+
+  <!-- Fonts + CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/assets/index-BALPvtSB.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-COZ9I8Oc.css">
+</head>
+<body class="bg-black text-white font-['Press_Start_2P'] overflow-x-hidden">
+  <div class="container mx-auto p-6 text-center">
+
+    <!-- 🌍 Intro contextuelle -->
+    <section class="mt-6 mb-16">
+      <br>
+      <h1 class="text-4xl font-bold mb-10 text-white drop-shadow-[0_0_4px_#0ff]">
+        Combien coûte un jour de vie dans le monde ?
+      </h1>
+<br>
+      <div class="intro-context mx-auto">
+        <p class="intro-line">✨ Chaque jour a un prix... selon l’endroit où tu te réveilles.</p>
+        <p class="intro-line">🚀 Pars pour un voyage intergalactique à travers les dépenses du quotidien.</p>
+        <p class="intro-line">🌍 Clique, explore, et découvre combien coûte une journée de vie dans chaque pays !</p>
+      </div>
+      
+    </section>
+
+   
+    <h2 class="text-2xl text-pink-400  drop-shadow-[0_0_7px_#fa15d8]">
+       Choisis ton perso 
+    </h2>
+
+<!-- 🎮 Sélection de personnage -->
+<section class="character-selector mt-8 mb-20 text-center">
+
+  <div class="flex justify-center gap-10">
+    <div class="character-option" data-character="2">
+      <img src="/assets/avatar2-Cbp6ToJ9.png" alt="avatar 2" />
+    </div>
+    <div class="character-option" data-character="1">
+      <img src="/assets/avatar1-Cnuj1zTG.gif" alt="avatar 1" />
+    </div>
+    <div class="character-option" data-character="3">
+      <img src="/assets/avatar3-r1eV1ReF.webp" alt="avatar 3" />
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- 🗺️ Carte interactive -->
+    <section id="map-container">
+      <svg id="map" width="700" height="700"></svg>
+      <br>
+      <br>
+
+
+      <!-- 🚀 Fusée et avatar -->
+      <img src="/assets/rocket-pixel-ZP-4p6K9.webp" id="rocket" alt="rocket" />
+      <img id="character" class="hidden" src="" alt="avatar" />
+
+      <!-- ℹ️ Info pays -->
+      <div id="country-info" class="info-box hidden">
+        <h2 id="country-name">Canada</h2>
+        <p id="daily-cost">Coût moyen par jour : 22€</p>
+        <button onclick="startSimulation()">VOIR UNE JOURNÉE TYPE</button>
+      </div>
+     
+
+    </section>
+
+    <br>
+    <br>
+    <!-- 🛸 Radar Chart / Cockpit -->
+    <div class="toggle-info">
+      <p class="text-sm text-cyan-300">↓ Ce bouton permet de basculer entre les deux vues ↓</p>
+    </div>
+
+    <section id="spaceship-section" class="mt-20 space-y-8 flex flex-col items-center">
+      <button id="toggleView" class="animated-button">Les 3 pays les plus chers</button>
+      <p class="text-sm text-yellow-300 mt-2">✨ Cliquez sur un pays dans la soucoupe pour voir le détail de ses activités !</p>
+      <div id="cockpit-chart" class="mt-6"></div>
+      <div id="activityDetails" class="mt-8"></div>
+    </section>
+
+    <!-- 📊 Graphique circulaire -->
+    <section id="circular-visual" class="my-32 px-4">
+      <div class="graph-explanation">
+        <h3 class="text-xl text-pink-400 mb-2">Distribution des dépenses quotidiennes par pays</h3>
+      
+        
+        <!-- Barre de recherche -->
+        <div class="search-wrapper">
+          <div class="search-icon"></div>
+          <input 
+            type="text" 
+            id="circular-search" 
+            placeholder="Chercher un pays" 
+          />
+        </div>
+      </div>
+      <div id="circular-barplot"></div>
+    </section>
+
+    <!-- 🕹️ Simulation d'une journée -->
+    <section id="day-simulation" class="mt-8 hidden">
+      <h2 class="text-2xl font-bold">Déroulement de la journée</h2>
+      <div id="timeline" class="mt-4"></div>
+    </section>
+
+    <!-- 🔊 Audio -->
+    <audio id="soucoupe-audio" src="/assets/soucoupe-CQJLCsTj.wav" preload="auto"></audio>
+  </div>
+
+  <!-- 🌌 Overlay pixel -->
+  <div class="pixel-overlay"></div>
+  <div id="tooltip" class="hidden"></div>
+
+  <!-- 📜 Scripts -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="./src/js/script.js"></script>
+
+  <!-- 📄 Lien vers le README -->
+<footer class="mt-20 pb-10 ml-4 text-sm text-white opacity-80 font-['Press_Start_2P']">
+  <p>
+     <a href="https://github.com/Git-najwa/visualdon_global_daily_cost/blob/main/README.md" target="_blank" class="underline hover:text-cyan-400 transition">
+      Voir les sources
+    </a>
+  </p>
+</footer>
+
+</body>
