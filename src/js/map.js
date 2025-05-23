@@ -40,7 +40,7 @@ document.querySelectorAll(".character-option").forEach(option => {
     const avatar = option.dataset.character;
     selectedCharacter = avatar;
 
-    characterImg.src = `/data/assets/${characterMap[avatar]}`;
+    characterImg.src = `./data/assets/${characterMap[avatar]}`;
     characterImg.classList.remove("hidden");
 
     characterImg.onload = () => {
@@ -65,7 +65,7 @@ function positionAvatarInRocket() {
 
 Promise.all([
   d3.json("https://unpkg.com/world-atlas@2/countries-110m.json"),
-  d3.json("/data/data.json")
+  d3.json("./data/data.json")
 ]).then(([worldData, costData]) => {
   const altNames = {
     "Japan": "Japan",
