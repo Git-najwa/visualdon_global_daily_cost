@@ -65,7 +65,7 @@ function positionAvatarInRocket() {
 
 Promise.all([
   d3.json("https://unpkg.com/world-atlas@2/countries-110m.json"),
-  d3.json("./data/data.json")
+  d3.json("../../data/data.json")
 ]).then(([worldData, costData]) => {
   const altNames = {
     "Japan": "Japan",

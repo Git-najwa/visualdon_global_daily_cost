@@ -50,7 +50,7 @@ export function drawCircularChart() {
     "#c2410c"  // Loyer (orange très foncé/brun)
   ]);
 
-  d3.json('./data/data.json').then(rawData => {
+  d3.json('../../data/data.json').then(rawData => {
     const countries = Object.keys(rawData);
     const categories = [
       "Eau et électricité", "Petit-déjeuner", "Transport",
