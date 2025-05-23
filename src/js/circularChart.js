@@ -1,4 +1,3 @@
-import * as d3 from 'd3';
 
 // Réduire les dimensions du graphique
 export function drawCircularChart() {
