@@ -1,4 +1,4 @@
-import data from "/data/data.json";
+import data from "../../data/data.json";
 
 const params = new URLSearchParams(window.location.search);
 const country = params.get("country");
@@ -32,7 +32,7 @@ if (!country || !data[country]) {
     block.dataset.hour = hour; // Important pour le scroll listener
 
     const scenes = [
-      "./data/assets/scene1.gif",
+      "../data/assets/scene1.gif",
       "./data/assets/scene2.gif",
       "./data/assets/scene3.gif",
       "./data/assets/scene4.gif",

@@ -40,7 +40,7 @@ document.querySelectorAll(".character-option").forEach(option => {
     const avatar = option.dataset.character;
     selectedCharacter = avatar;
 
-    characterImg.src = `./data/assets/${characterMap[avatar]}`;
+    characterImg.src = `../data/assets/${characterMap[avatar]}`;
     characterImg.classList.remove("hidden");
 
     characterImg.onload = () => {

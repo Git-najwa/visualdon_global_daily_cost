@@ -1,4 +1,4 @@
-import data from "/data/data.json";
+import data from "../../data/data.json";
 
 const params = new URLSearchParams(window.location.search);
 const country1 = params.get("country1");
