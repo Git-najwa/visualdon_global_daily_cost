@@ -1,4 +1,4 @@
-import data from "/data/data.json" assert { type: "json" };
+import data from "/data/data.json";
 
 const params = new URLSearchParams(window.location.search);
 const country1 = params.get("country1");

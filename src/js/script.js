@@ -3,3 +3,6 @@ function startSimulation() {
   if (!country) return;
   window.location.href = `/journee.html?country=${encodeURIComponent(country)}`;
 }
+
+// RENDRE LA FONCTION ACCESSIBLE GLOBALEMENT
+window.startSimulation = startSimulation;
