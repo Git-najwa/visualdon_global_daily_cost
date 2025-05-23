@@ -1,4 +1,3 @@
-import * as d3 from "https://cdn.skypack.dev/d3@7";
 import data from "/data/data.json" assert { type: "json" };
 
 const params = new URLSearchParams(window.location.search);
@@ -30,7 +29,7 @@ function buildTimeline(containerId, countryName) {
 
     const block = document.createElement("div");
     block.className = "activity-block";
-    block.style.backgroundImage = `url('/data/assets/${scenes[index]}')`;
+    block.style.backgroundImage = `url('./data/assets/${scenes[index]}')`;
 
     block.innerHTML = `
       <div class="time">${hour}:00</div>
@@ -38,7 +37,7 @@ function buildTimeline(containerId, countryName) {
     `;
 
     block.addEventListener("click", () => {
-      openFullscreenActivityPopup(label.trim(), cost.trim(), `/data/assets/${scenes[index]}`);
+      openFullscreenActivityPopup(label.trim(), cost.trim(), `./data/assets/${scenes[index]}`);
     });
 
     container.appendChild(block);
