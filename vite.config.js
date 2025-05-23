@@ -1,4 +1,3 @@
-// filepath: /Users/loriecrettex/Desktop/visualdon_global_daily_cost/vite.config.js
 import { defineConfig } from 'vite';
 
 export default defineConfig({

@@ -32,11 +32,17 @@ if (!country || !data[country]) {
     block.dataset.hour = hour; // Important pour le scroll listener
 
     const scenes = [
-      "scene1.gif", "scene2.gif", "scene3.gif",
-      "scene4.gif", "scene5.gif", "scene6.gif",
-      "scene7.gif", "scene8.webp", "scene9.gif",
+      "./data/assets/scene1.gif",
+      "./data/assets/scene2.gif",
+      "./data/assets/scene3.gif",
+      "./data/assets/scene4.gif",
+      "./data/assets/scene5.gif",
+      "./data/assets/scene6.gif",
+      "./data/assets/scene7.gif",
+      "./data/assets/scene8.webp",
+      "./data/assets/scene9.gif",
     ];
-    block.style.backgroundImage = `url('data/assets/${scenes[index]}')`;
+    block.style.backgroundImage = `url('${scenes[index]}')`;
 
     let bubbleHTML = "";
     let costHTML = "";
