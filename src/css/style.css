@@ -1,5 +1,5 @@
 body {
-  background: url('./data/assets/mapFond.gif') no-repeat center center fixed;
+  background: url('../../data/assets/mapFond.gif') no-repeat center center fixed;
   background-size: cover;
   font-family: 'Press Start 2P', cursive;
   margin: 0;
